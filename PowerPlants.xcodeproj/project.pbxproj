@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		22EC1F57F757BACD55865997 /* Pods_PowerPlantsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C9A2BCDDC63B6056C62883 /* Pods_PowerPlantsTests.framework */; };
+		2499DFB5201CE09900415771 /* PlantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2499DFB4201CE09900415771 /* PlantTableViewCell.swift */; };
+		2499DFB7201CE53600415771 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2499DFB6201CE53600415771 /* GoogleService-Info.plist */; };
 		7E0889F729FA9F4BED050046 /* Pods_PowerPlants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2952A1A5BBC3B275B30FFC5C /* Pods_PowerPlants.framework */; };
 		C4CCCA15913602AC3AFAF887 /* Pods_PowerPlantsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46DE9953A63583274590CE55 /* Pods_PowerPlantsUITests.framework */; };
 		D20CE5C5201C796900DE25FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CE5C4201C796900DE25FA /* AppDelegate.swift */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		22ED7BEE28EB36F7766ECC9A /* Pods-PowerPlants.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerPlants.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerPlants/Pods-PowerPlants.debug.xcconfig"; sourceTree = "<group>"; };
+		2499DFB4201CE09900415771 /* PlantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantTableViewCell.swift; sourceTree = "<group>"; };
+		2499DFB6201CE53600415771 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2952A1A5BBC3B275B30FFC5C /* Pods_PowerPlants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PowerPlants.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46DE9953A63583274590CE55 /* Pods_PowerPlantsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PowerPlantsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		542718047543B0EF4105776E /* Pods-PowerPlantsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerPlantsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PowerPlantsUITests/Pods-PowerPlantsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				D22555F7201CD9F300C6E527 /* PlantProfileViewController.swift */,
 				D20CE5CD201C796900DE25FA /* LaunchScreen.storyboard */,
 				D20CE5D0201C796900DE25FA /* Info.plist */,
+				2499DFB4201CE09900415771 /* PlantTableViewCell.swift */,
+				2499DFB6201CE53600415771 /* GoogleService-Info.plist */,
 			);
 			path = PowerPlants;
 			sourceTree = "<group>";
@@ -300,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D20CE5CF201C796900DE25FA /* LaunchScreen.storyboard in Resources */,
+				2499DFB7201CE53600415771 /* GoogleService-Info.plist in Resources */,
 				D20CE5CC201C796900DE25FA /* Assets.xcassets in Resources */,
 				D20CE5CA201C796900DE25FA /* Main.storyboard in Resources */,
 			);
@@ -498,6 +505,7 @@
 				D22555F2201CC36E00C6E527 /* AddPlant2ViewController.swift in Sources */,
 				D22555F4201CD13A00C6E527 /* AddPlant3ViewController.swift in Sources */,
 				D20CE601201CBFE800DE25FA /* AddPlant1ViewController.swift in Sources */,
+				2499DFB5201CE09900415771 /* PlantTableViewCell.swift in Sources */,
 				D22555F8201CD9F400C6E527 /* PlantProfileViewController.swift in Sources */,
 				D20CE5FF201CBDD500DE25FA /* KindTableViewCell.swift in Sources */,
 				D20CE5C5201C796900DE25FA /* AppDelegate.swift in Sources */,

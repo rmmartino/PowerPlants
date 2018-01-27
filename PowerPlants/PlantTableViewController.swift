@@ -7,23 +7,34 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseStorage
 
 class PlantTableViewController: UITableViewController {
 
-    @IBOutlet weak var cellPlantName: UILabel!
-    @IBOutlet weak var plantPhoto: UIImageView!
-    @IBOutlet weak var cellPlantKind: UILabel!
-    
-    @IBOutlet weak var PlantCell: UIView!
-    
+    var snapshot: [QueryDocumentSnapshot] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let db = Firestore.firestore()
+        
+        let plantsRef = db.collection("users/5BI75Xa099RRvnkekLoyIJO2xWv2/plants")
+        
+        plantsRef.addSnapshotListener(options: nil) { (snp, err) in
+            if let documents = snp?.documents {
+                self.snapshot = documents
+                self.tableView.reloadData()
+            }
+        }
+    
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,23 +46,62 @@ class PlantTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return snapshot.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlantTableViewCell", for: indexPath)  as! PlantTableViewCell
+        
+        let plant = snapshot[indexPath.row]
+        let plantName = plant.get("name") as! String
+        cell.plantNameLabel.text = "\(plantName)"
+        
+        let plantType = plant.get("plant_type") as! String
+        cell.plantTypeLabel.text = "\(plantType)"
+        
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let imagesRef = storageRef.child("images")
+        let fileName = "delray-plants-house-plants-6zz-64_1000.jpg"
+        let spaceRef = imagesRef.child(fileName)
+        let path = spaceRef.fullPath;
+        let name = spaceRef.name;
+        let plantPicture = plant.get("image_reference")
+        let gsReference = storage.reference(forURL: "gs://powerplants-c46e2.appspot.com/plantPicture")
+        // Create a reference to the file you want to download
+        
+        let islandRef = storageRef.child("plants/\(plant.documentID).jpg")
+        
+        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+        islandRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+            if let error = error {
+                // Uh-oh, an error occurred!
+                print(error)
+            } else {
+                // Data for "images/island.jpg" is returned
+                let image = UIImage(data: data!)
+                cell.happyPlantImage.image = image
+            }
+        }
+     
+        
+        //var spaceRef = storageRef.child("images/space.jpg")
+        
         // Configure the cell...
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
