@@ -10,10 +10,7 @@ import UIKit
 
 class LoginReturningViewController: UIViewController {
 
-    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var userNameField: UITextField!
-    @IBOutlet weak var passwordPrompt: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,24 +22,7 @@ class LoginReturningViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func press_Next(_ sender: UIButton) {
-        var passwordEntered = passwordField.text
-        while(passwordField.text != "Hi") {
-            passwordPrompt.adjustsFontSizeToFitWidth = true;
-            passwordPrompt.minimumScaleFactor = 0.1
-            passwordPrompt.text = "Password incorrect"
-            
-            passwordEntered = passwordField.text
-             }
-        self.performSegue(withIdentifier: "segueFromLoginToPlantList", sender: self)
-       
-        /*
-         if username is in database
-         and password matches username's password
-          move to next scene
-         */
-        
-    }
+
     
     /*
     // MARK: - Navigation

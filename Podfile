@@ -10,6 +10,9 @@ pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
+pod 'FirebaseUI'
+pod 'GoogleSignIn'
+
   target 'PowerPlantsTests' do
     inherit! :search_paths
     # Pods for testing

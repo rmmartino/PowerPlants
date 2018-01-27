@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import FirebaseStorage
+import FirebaseFirestore
 
 class PlantProfileViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let db = Firestore.firestore()
+        let plantId = "" //get from previous scene????
+        
+        let plantProfileName = db.collection("users/5BI75Xa099RRvnkekLoyIJO2xWv2/plants" + plantId)
         // Do any additional setup after loading the view.
     }
 
