@@ -10,6 +10,7 @@ pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Firebase/Auth'
 pod 'Bean-iOS-OSX-SDK'
+pod 'WMGaugeView'
 
 pod 'Firebase/Storage'
   target 'PowerPlantsTests' do
