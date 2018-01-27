@@ -12,6 +12,9 @@ pod 'Firebase/Auth'
 pod 'Bean-iOS-OSX-SDK'
 
 pod 'Firebase/Storage'
+pod 'FirebaseUI'
+pod 'GoogleSignIn'
+
   target 'PowerPlantsTests' do
     inherit! :search_paths
     # Pods for testing
