@@ -1,14 +1,13 @@
 //
-//  AddPlant2.swift
-//  PowerPlants
+//  AddPlant2_5ViewController.swift
+//  
 //
 //  Created by Alyssa Schilke on 1/27/18.
-//  Copyright © 2018 Alyssa Schilke. All rights reserved.
 //
 
 import UIKit
 
-class AddPlant2: UIViewController {
+class AddPlant2_5ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
