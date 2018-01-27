@@ -9,14 +9,13 @@
 import UIKit
 
 class AddPlant1ViewController: UIViewController {
-
-    @IBOutlet weak var step1Label: UILabel!
-    
+    var plantName: String? = nil
     @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var NextButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        plantName = String()
         // Do any additional setup after loading the view.
     }
     override func didReceiveMemoryWarning() {
@@ -26,7 +25,8 @@ class AddPlant1ViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func PressNext(_ sender: UIButton) {
-        let plantName = nameField.text
+        plantName = nameField.text
+        //send plantName to  dB
     }
     
     /*

@@ -2,9 +2,7 @@
 //  PlantTableViewCell.swift
 //  PowerPlants
 //
-//  Created by Alyssa Schilke on 1/27/18.
-//  Copyright © 2018 Alyssa Schilke. All rights reserved.
-//
+
 
 import UIKit
 
