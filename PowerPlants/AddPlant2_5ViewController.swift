@@ -8,6 +8,7 @@
 import UIKit
 
 class AddPlant2_5ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     @IBOutlet weak var imagePicked: UIImageView!
     
     override func viewDidLoad() {

@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import FirebaseStorage
+import FirebaseFirestore
 class AddPlant1ViewController: UIViewController {
     var plantName: String? = nil
     @IBOutlet weak var nameField: UITextField!
@@ -25,18 +26,24 @@ class AddPlant1ViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func PressNext(_ sender: UIButton) {
-        plantName = nameField.text
-        //send plantName to  dB
+        
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "StepTwo"
+        {
+            let vc = segue.destination as! AddPlant2ViewController
+            self.plantName = nameField.text!
+            vc.plantName = self.plantName!
+        }
     }
-    */
+    
 
 }

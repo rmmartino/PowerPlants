@@ -148,7 +148,7 @@
                                 </state>
                                 <connections>
                                     <action selector="PressNext:" destination="2rq-wI-eXW" eventType="touchUpInside" id="e0f-tf-puN"/>
-                                    <segue destination="Wso-Zm-GTl" kind="show" id="uC8-eh-71G"/>
+                                    <segue destination="Wso-Zm-GTl" kind="show" identifier="StepTwo" id="uC8-eh-71G"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r2T-z0-NkD">
@@ -191,7 +191,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="GaU-Kb-nfJ" customClass="KindTableViewCell" customModule="PowerPlants" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="KindTableViewCell" id="GaU-Kb-nfJ" customClass="KindTableViewCell" customModule="PowerPlants" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GaU-Kb-nfJ" id="Fe5-SJ-U4m">
@@ -208,10 +208,15 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="plantKindLabel" destination="1sT-nd-u72" id="meT-Hn-zj9"/>
                                             <segue destination="EKn-5d-MKs" kind="show" id="XvJ-2T-N0C"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Wso-Zm-GTl" id="pzK-is-aRi"/>
+                                    <outlet property="delegate" destination="Wso-Zm-GTl" id="zbP-t1-5MQ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -222,6 +227,9 @@
                         <barButtonItem key="backBarButtonItem" title="Step 2" id="JwP-Se-oW3"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="zkZ-Uk-edO" id="uiS-xB-HP1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHT-S5-pn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
