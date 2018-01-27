@@ -15,7 +15,7 @@
         <!--PowerPlant-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PowerPlants" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PlantTableViewController" customModule="PowerPlants" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,6 +57,9 @@
                                                 <constraint firstItem="QUQ-ha-mjU" firstAttribute="leading" secondItem="tZk-GN-m83" secondAttribute="leading" id="xOn-Zc-OBk"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="H1W-X6-AkS" kind="show" id="jCo-Ws-TVz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -79,15 +82,37 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2rq-wI-eXW" kind="show" id="i1m-it-vdH"/>
+                                    <segue destination="Io2-O0-Hxz" kind="show" id="i1m-it-vdH"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="PlantCell" destination="tZk-GN-m83" id="bHp-p9-XGP"/>
+                        <outlet property="cellPlantKind" destination="bmM-eW-9dl" id="1hZ-kp-0by"/>
+                        <outlet property="cellPlantName" destination="mwV-qX-ds2" id="CkZ-Mq-I6p"/>
+                        <outlet property="plantName" destination="gUd-uU-XXq" id="ObS-it-1cG"/>
+                        <outlet property="plantPhoto" destination="QUQ-ha-mjU" id="g4Q-sz-VM0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-476.81159420289856" y="122.28260869565219"/>
+        </scene>
+        <!--Plant Profile View Controller-->
+        <scene sceneID="5tC-D8-3Tq">
+            <objects>
+                <viewController id="H1W-X6-AkS" customClass="PlantProfileViewController" customModule="PowerPlants" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x5T-si-Ee2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qQD-m6-b3c"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="brz-8s-Vtq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="122"/>
         </scene>
         <!--NewPlant-->
         <scene sceneID="FOX-37-tZd">
@@ -97,23 +122,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1: Name Your Plant" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQQ-yg-SUm">
-                                <rect key="frame" x="20" y="98" width="374" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="MUA-Y5-Nw4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" red="0.22352941179999999" green="0.51764705879999995" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r2T-z0-NkD">
-                                <rect key="frame" x="20" y="195" width="374" height="43"/>
-                                <color key="textColor" red="0.22352941179999999" green="0.51764705879999995" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVI-sr-UmA">
-                                <rect key="frame" x="176" y="356.66666666666669" width="63" height="49"/>
+                                <rect key="frame" x="176" y="357" width="63" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.22352941179999999" green="0.51764705879999995" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -124,31 +134,34 @@
                                     <segue destination="Wso-Zm-GTl" kind="show" id="uC8-eh-71G"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r2T-z0-NkD">
+                                <rect key="frame" x="20" y="252" width="374" height="43"/>
+                                <color key="textColor" red="0.22352941179999999" green="0.51764705879999995" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZVI-sr-UmA" firstAttribute="centerX" secondItem="DJJ-sn-Rrh" secondAttribute="centerX" id="A3t-b0-nSY"/>
                             <constraint firstItem="DJJ-sn-Rrh" firstAttribute="trailing" secondItem="r2T-z0-NkD" secondAttribute="trailing" constant="20" id="CzQ-db-gNb"/>
-                            <constraint firstItem="DJJ-sn-Rrh" firstAttribute="trailing" secondItem="cQQ-yg-SUm" secondAttribute="trailing" constant="20" id="HN5-jk-j9Q"/>
-                            <constraint firstItem="cQQ-yg-SUm" firstAttribute="centerX" secondItem="DJJ-sn-Rrh" secondAttribute="centerX" id="JPG-44-Plf"/>
-                            <constraint firstItem="r2T-z0-NkD" firstAttribute="top" secondItem="cQQ-yg-SUm" secondAttribute="bottom" constant="37" id="LZw-tx-C8d"/>
                             <constraint firstItem="ZVI-sr-UmA" firstAttribute="centerY" secondItem="DJJ-sn-Rrh" secondAttribute="centerY" constant="-19" id="c55-Ii-Euv"/>
+                            <constraint firstItem="r2T-z0-NkD" firstAttribute="top" secondItem="DJJ-sn-Rrh" secondAttribute="top" constant="188" id="pQK-cq-iy4"/>
                             <constraint firstItem="r2T-z0-NkD" firstAttribute="centerX" secondItem="DJJ-sn-Rrh" secondAttribute="centerX" id="t4C-OW-M0p"/>
-                            <constraint firstItem="cQQ-yg-SUm" firstAttribute="top" secondItem="DJJ-sn-Rrh" secondAttribute="top" constant="34" id="xPt-B2-1pR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DJJ-sn-Rrh"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Step 1: Name Your Plant" id="B80-mW-8Bg"/>
                     <connections>
                         <outlet property="NextButton" destination="ZVI-sr-UmA" id="mTG-SK-tO9"/>
                         <outlet property="nameField" destination="r2T-z0-NkD" id="pPH-H5-LKS"/>
-                        <outlet property="step1Label" destination="cQQ-yg-SUm" id="Qw5-ps-ayv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wGZ-OK-MGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-476.81159420289856" y="881.25000000000011"/>
+            <point key="canvasLocation" x="-383" y="880"/>
         </scene>
-        <!--Add Plant2 View Controller-->
+        <!--Step 2: What Kind of Plant?-->
         <scene sceneID="Zbu-m3-Aaf">
             <objects>
                 <viewController id="Wso-Zm-GTl" customClass="AddPlant2ViewController" customModule="PowerPlants" customModuleProvider="target" sceneMemberID="viewController">
@@ -187,12 +200,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="XCr-By-5r9"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Step 2: What Kind of Plant?" id="Gh7-mq-DX8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHT-S5-pn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="182.60869565217394" y="880.43478260869574"/>
+            <point key="canvasLocation" x="489.85507246376818" y="880.43478260869574"/>
         </scene>
-        <!--Add Plant3 View Controller-->
+        <!--Confirm-->
         <scene sceneID="8eE-JR-2xa">
             <objects>
                 <viewController id="1tq-NY-Jri" customClass="AddPlant3ViewController" customModule="PowerPlants" customModuleProvider="target" sceneMemberID="viewController">
@@ -200,21 +214,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVL-KC-UST">
-                                <rect key="frame" x="20" y="76" width="112" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVL-KC-UST">
+                                <rect key="frame" x="20" y="95" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kind: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pw2-2O-17M">
-                                <rect key="frame" x="35" y="277" width="44" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3C-fI-UMo">
+                                <rect key="frame" x="140" y="86" width="210" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3C-fI-UMo">
-                                <rect key="frame" x="140" y="75" width="210" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aH7-pq-HuK">
+                                <rect key="frame" x="184" y="435" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="hOJ-n0-9Pj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Kind: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pw2-2O-17M">
+                                <rect key="frame" x="20" y="257" width="112" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -234,6 +256,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="p8C-Ql-YP8"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Confirm" id="uBM-IC-Rf9"/>
                     <connections>
                         <outlet property="NameEntryLabel" destination="C3C-fI-UMo" id="F73-qS-xjD"/>
                         <outlet property="kindTitleLabel" destination="pw2-2O-17M" id="nS3-lo-qGg"/>
@@ -242,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1k-dO-XH1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="895.6521739130435" y="880.43478260869574"/>
+            <point key="canvasLocation" x="1202.8985507246377" y="880.43478260869574"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LPp-8t-2DS">
@@ -288,31 +311,55 @@
                                     <color key="titleColor" red="0.22160123500000001" green="0.51734536919999996" blue="0.19374926070000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2rq-wI-eXW" kind="presentation" modalTransitionStyle="flipHorizontal" id="SX5-OJ-1Xx"/>
+                                    <segue destination="Io2-O0-Hxz" kind="presentation" modalTransitionStyle="flipHorizontal" id="SX5-OJ-1Xx"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Welcome to PowerPlants!" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tQ0-fa-7yN">
-                                <rect key="frame" x="38" y="175.66666666666666" width="338" height="39"/>
-                                <color key="textColor" red="0.22160123500000001" green="0.51734536919999996" blue="0.19374926070000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to PowerPlants!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZL-7w-uBB">
+                                <rect key="frame" x="20" y="144" width="371" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" red="0.22352941179999999" green="0.51764705879999995" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tQ0-fa-7yN" firstAttribute="centerX" secondItem="TxA-AH-NLX" secondAttribute="centerX" id="VZZ-2A-ZN7"/>
                             <constraint firstItem="cZ3-Nb-BtI" firstAttribute="centerX" secondItem="TxA-AH-NLX" secondAttribute="centerX" id="XEb-MO-loI"/>
                             <constraint firstItem="9Ha-Ki-Ihl" firstAttribute="centerX" secondItem="TxA-AH-NLX" secondAttribute="centerX" id="Y1l-gd-k8O"/>
                             <constraint firstItem="9Ha-Ki-Ihl" firstAttribute="centerY" secondItem="TxA-AH-NLX" secondAttribute="centerY" id="dot-s2-XB0"/>
                             <constraint firstItem="TxA-AH-NLX" firstAttribute="bottom" secondItem="cZ3-Nb-BtI" secondAttribute="bottom" constant="76" id="hbB-as-9l6"/>
-                            <constraint firstItem="9Ha-Ki-Ihl" firstAttribute="top" secondItem="tQ0-fa-7yN" secondAttribute="bottom" constant="30" id="jj3-yz-RtM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TxA-AH-NLX"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnr-GY-5vI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1258" y="881"/>
+            <point key="canvasLocation" x="-1828.985507246377" y="879.61956521739137"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fhq-Gh-U1N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Io2-O0-Hxz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Cc-SP-rfk">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.22352941179999999" green="0.51764705879999995" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2rq-wI-eXW" kind="relationship" relationship="rootViewController" id="7QX-sE-f84"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nT8-Uw-u3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1099" y="880"/>
         </scene>
     </scenes>
     <resources>
@@ -321,5 +368,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="i1m-it-vdH"/>
+        <segue reference="hOJ-n0-9Pj"/>
     </inferredMetricsTieBreakers>
 </document>
