@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>513939457276-smvicuhr6gikrl6lhd4jrq71trsrplb0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.513939457276-smvicuhr6gikrl6lhd4jrq71trsrplb0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAGdABAmnIF6mg_d43Oc4VTxpYhVoMG_98</string>
+	<key>GCM_SENDER_ID</key>
+	<string>513939457276</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.powerplants.app</string>
+	<key>PROJECT_ID</key>
+	<string>powerplants-c46e2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>powerplants-c46e2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:513939457276:ios:6c6b49fd4e046956</string>
+	<key>DATABASE_URL</key>
+	<string>https://powerplants-c46e2.firebaseio.com</string>
+</dict>
+</plist>

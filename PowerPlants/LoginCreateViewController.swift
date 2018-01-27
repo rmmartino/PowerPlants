@@ -1,5 +1,5 @@
 //
-//  AddPlant3ViewController.swift
+//  LoginCreateViewController.swift
 //  PowerPlants
 //
 //  Created by Alyssa Schilke on 1/27/18.
@@ -8,16 +8,11 @@
 
 import UIKit
 
-class AddPlant3ViewController: UIViewController {
+class LoginCreateViewController: UIViewController {
 
-    @IBOutlet weak var nameTitleLabel: UILabel!
-    @IBOutlet weak var nameEntryLabel: UILabel!
-    @IBOutlet weak var kindTitleLabel: UILabel!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let nameEntryLabel.text = get from database
+
         // Do any additional setup after loading the view.
     }
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		22EC1F57F757BACD55865997 /* Pods_PowerPlantsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C9A2BCDDC63B6056C62883 /* Pods_PowerPlantsTests.framework */; };
+		2499DFB5201CE09900415771 /* PlantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2499DFB4201CE09900415771 /* PlantTableViewCell.swift */; };
+		2499DFB7201CE53600415771 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2499DFB6201CE53600415771 /* GoogleService-Info.plist */; };
 		7E0889F729FA9F4BED050046 /* Pods_PowerPlants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2952A1A5BBC3B275B30FFC5C /* Pods_PowerPlants.framework */; };
 		B31EC15D201CDA8B00DCE681 /* PPABeanSyncUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31EC15C201CDA8B00DCE681 /* PPABeanSyncUtility.swift */; };
 		C4CCCA15913602AC3AFAF887 /* Pods_PowerPlantsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46DE9953A63583274590CE55 /* Pods_PowerPlantsUITests.framework */; };
@@ -23,6 +25,11 @@
 		D20CE601201CBFE800DE25FA /* AddPlant1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CE600201CBFE800DE25FA /* AddPlant1ViewController.swift */; };
 		D22555F2201CC36E00C6E527 /* AddPlant2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555F1201CC36E00C6E527 /* AddPlant2ViewController.swift */; };
 		D22555F4201CD13A00C6E527 /* AddPlant3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555F3201CD13A00C6E527 /* AddPlant3ViewController.swift */; };
+		D22555F8201CD9F400C6E527 /* PlantProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555F7201CD9F300C6E527 /* PlantProfileViewController.swift */; };
+		D22555FA201CDDEE00C6E527 /* PlantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555F9201CDDEE00C6E527 /* PlantTableViewCell.swift */; };
+		D22555FE201CE08300C6E527 /* AddPlant2_5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555FD201CE08200C6E527 /* AddPlant2_5ViewController.swift */; };
+		D2255600201CE23900C6E527 /* LoginCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555FF201CE23900C6E527 /* LoginCreateViewController.swift */; };
+		D2255602201CE5E300C6E527 /* LoginReturningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2255601201CE5E300C6E527 /* LoginReturningViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		22ED7BEE28EB36F7766ECC9A /* Pods-PowerPlants.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerPlants.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerPlants/Pods-PowerPlants.debug.xcconfig"; sourceTree = "<group>"; };
+		2499DFB4201CE09900415771 /* PlantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantTableViewCell.swift; sourceTree = "<group>"; };
+		2499DFB6201CE53600415771 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2952A1A5BBC3B275B30FFC5C /* Pods_PowerPlants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PowerPlants.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46DE9953A63583274590CE55 /* Pods_PowerPlantsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PowerPlantsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		542718047543B0EF4105776E /* Pods-PowerPlantsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerPlantsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PowerPlantsUITests/Pods-PowerPlantsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +78,11 @@
 		D20CE600201CBFE800DE25FA /* AddPlant1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlant1ViewController.swift; sourceTree = "<group>"; };
 		D22555F1201CC36E00C6E527 /* AddPlant2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlant2ViewController.swift; sourceTree = "<group>"; };
 		D22555F3201CD13A00C6E527 /* AddPlant3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlant3ViewController.swift; sourceTree = "<group>"; };
+		D22555F7201CD9F300C6E527 /* PlantProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantProfileViewController.swift; sourceTree = "<group>"; };
+		D22555F9201CDDEE00C6E527 /* PlantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantTableViewCell.swift; sourceTree = "<group>"; };
+		D22555FD201CE08200C6E527 /* AddPlant2_5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddPlant2_5ViewController.swift; path = PowerPlants/AddPlant2_5ViewController.swift; sourceTree = SOURCE_ROOT; };
+		D22555FF201CE23900C6E527 /* LoginCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCreateViewController.swift; sourceTree = "<group>"; };
+		D2255601201CE5E300C6E527 /* LoginReturningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReturningViewController.swift; sourceTree = "<group>"; };
 		F87081E6A8BF7E074292ED08 /* Pods-PowerPlantsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerPlantsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerPlantsTests/Pods-PowerPlantsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB4333C7E51B8A528F3372DE /* Pods-PowerPlantsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerPlantsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PowerPlantsTests/Pods-PowerPlantsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,17 +172,24 @@
 			isa = PBXGroup;
 			children = (
 				B31EC15B201CDA5A00DCE681 /* Hardware */,
+				D22555FD201CE08200C6E527 /* AddPlant2_5ViewController.swift */,
 				D20CE5C4201C796900DE25FA /* AppDelegate.swift */,
 				D20CE5C6201C796900DE25FA /* ViewController.swift */,
 				D22555F3201CD13A00C6E527 /* AddPlant3ViewController.swift */,
 				D20CE5C8201C796900DE25FA /* Main.storyboard */,
+				D2255601201CE5E300C6E527 /* LoginReturningViewController.swift */,
+				D22555FF201CE23900C6E527 /* LoginCreateViewController.swift */,
 				D22555F1201CC36E00C6E527 /* AddPlant2ViewController.swift */,
 				D20CE600201CBFE800DE25FA /* AddPlant1ViewController.swift */,
 				D20CE5CB201C796900DE25FA /* Assets.xcassets */,
 				D20CE5FE201CBDD500DE25FA /* KindTableViewCell.swift */,
+				D22555F9201CDDEE00C6E527 /* PlantTableViewCell.swift */,
 				D20CE5FA201CBDAD00DE25FA /* PlantTableViewController.swift */,
+				D22555F7201CD9F300C6E527 /* PlantProfileViewController.swift */,
 				D20CE5CD201C796900DE25FA /* LaunchScreen.storyboard */,
 				D20CE5D0201C796900DE25FA /* Info.plist */,
+				2499DFB4201CE09900415771 /* PlantTableViewCell.swift */,
+				2499DFB6201CE53600415771 /* GoogleService-Info.plist */,
 			);
 			path = PowerPlants;
 			sourceTree = "<group>";
@@ -308,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D20CE5CF201C796900DE25FA /* LaunchScreen.storyboard in Resources */,
+				2499DFB7201CE53600415771 /* GoogleService-Info.plist in Resources */,
 				D20CE5CC201C796900DE25FA /* Assets.xcassets in Resources */,
 				D20CE5CA201C796900DE25FA /* Main.storyboard in Resources */,
 			);
@@ -505,10 +527,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D20CE5C7201C796900DE25FA /* ViewController.swift in Sources */,
+				D22555FE201CE08300C6E527 /* AddPlant2_5ViewController.swift in Sources */,
 				D22555F2201CC36E00C6E527 /* AddPlant2ViewController.swift in Sources */,
+				D2255602201CE5E300C6E527 /* LoginReturningViewController.swift in Sources */,
+				D2255600201CE23900C6E527 /* LoginCreateViewController.swift in Sources */,
 				D22555F4201CD13A00C6E527 /* AddPlant3ViewController.swift in Sources */,
 				B31EC15D201CDA8B00DCE681 /* PPABeanSyncUtility.swift in Sources */,
 				D20CE601201CBFE800DE25FA /* AddPlant1ViewController.swift in Sources */,
+				D22555FA201CDDEE00C6E527 /* PlantTableViewCell.swift in Sources */,
+				D22555F8201CD9F400C6E527 /* PlantProfileViewController.swift in Sources */,
 				D20CE5FF201CBDD500DE25FA /* KindTableViewCell.swift in Sources */,
 				D20CE5C5201C796900DE25FA /* AppDelegate.swift in Sources */,
 				D20CE5FB201CBDAD00DE25FA /* PlantTableViewController.swift in Sources */,

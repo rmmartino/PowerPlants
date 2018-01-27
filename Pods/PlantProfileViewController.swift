@@ -1,23 +1,17 @@
 //
-//  AddPlant3ViewController.swift
-//  PowerPlants
+//  PlantProfileViewController.swift
+//  BoringSSL
 //
 //  Created by Alyssa Schilke on 1/27/18.
-//  Copyright © 2018 Alyssa Schilke. All rights reserved.
 //
 
 import UIKit
 
-class AddPlant3ViewController: UIViewController {
+class PlantProfileViewController: UIViewController {
 
-    @IBOutlet weak var nameTitleLabel: UILabel!
-    @IBOutlet weak var nameEntryLabel: UILabel!
-    @IBOutlet weak var kindTitleLabel: UILabel!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let nameEntryLabel.text = get from database
+
         // Do any additional setup after loading the view.
     }
 
