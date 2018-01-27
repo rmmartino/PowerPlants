@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlantTableViewCell" rowHeight="90" id="1T9-nS-CAp" customClass="PlantTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlantTableViewCell" rowHeight="90" id="1T9-nS-CAp" customClass="PlantTableViewCell" customModule="PowerPlants" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1T9-nS-CAp" id="w31-O6-lXL">
@@ -55,13 +55,16 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="happyPlantImage" destination="qSC-Dd-l1e" id="0RL-a9-0m1"/>
+                                    <outlet property="plantNameLabel" destination="u2z-aE-XYh" id="VJf-yp-A6G"/>
+                                    <outlet property="plantTypeLabel" destination="3ZF-ht-gnm" id="7KU-pU-Fva"/>
                                     <segue destination="H1W-X6-AkS" kind="showDetail" id="ZUa-i8-Nub"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="hnf-3V-86E" id="18z-JT-3Of"/>
-                            <outlet property="delegate" destination="hnf-3V-86E" id="dIt-O4-b9P"/>
+                            <outlet property="dataSource" destination="hnf-3V-86E" id="pOJ-UV-abn"/>
+                            <outlet property="delegate" destination="hnf-3V-86E" id="RUa-CJ-Ftp"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="PowerPlant" id="zJm-JC-EM9"/>
