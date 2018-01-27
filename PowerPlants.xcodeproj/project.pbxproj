@@ -14,6 +14,11 @@
 		D20CE5CF201C796900DE25FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20CE5CD201C796900DE25FA /* LaunchScreen.storyboard */; };
 		D20CE5DA201C796900DE25FA /* PowerPlantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CE5D9201C796900DE25FA /* PowerPlantsTests.swift */; };
 		D20CE5E5201C796900DE25FA /* PowerPlantsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CE5E4201C796900DE25FA /* PowerPlantsUITests.swift */; };
+		D20CE5FB201CBDAD00DE25FA /* PlantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CE5FA201CBDAD00DE25FA /* PlantTableViewController.swift */; };
+		D20CE5FF201CBDD500DE25FA /* KindTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CE5FE201CBDD500DE25FA /* KindTableViewCell.swift */; };
+		D20CE601201CBFE800DE25FA /* AddPlant1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CE600201CBFE800DE25FA /* AddPlant1ViewController.swift */; };
+		D22555F2201CC36E00C6E527 /* AddPlant2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555F1201CC36E00C6E527 /* AddPlant2ViewController.swift */; };
+		D22555F4201CD13A00C6E527 /* AddPlant3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555F3201CD13A00C6E527 /* AddPlant3ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		D20CE5E0201C796900DE25FA /* PowerPlantsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PowerPlantsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20CE5E4201C796900DE25FA /* PowerPlantsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerPlantsUITests.swift; sourceTree = "<group>"; };
 		D20CE5E6201C796900DE25FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D20CE5FA201CBDAD00DE25FA /* PlantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantTableViewController.swift; sourceTree = "<group>"; };
+		D20CE5FE201CBDD500DE25FA /* KindTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindTableViewCell.swift; sourceTree = "<group>"; };
+		D20CE600201CBFE800DE25FA /* AddPlant1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlant1ViewController.swift; sourceTree = "<group>"; };
+		D22555F1201CC36E00C6E527 /* AddPlant2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlant2ViewController.swift; sourceTree = "<group>"; };
+		D22555F3201CD13A00C6E527 /* AddPlant3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlant3ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +109,13 @@
 			children = (
 				D20CE5C4201C796900DE25FA /* AppDelegate.swift */,
 				D20CE5C6201C796900DE25FA /* ViewController.swift */,
+				D22555F3201CD13A00C6E527 /* AddPlant3ViewController.swift */,
 				D20CE5C8201C796900DE25FA /* Main.storyboard */,
+				D22555F1201CC36E00C6E527 /* AddPlant2ViewController.swift */,
+				D20CE600201CBFE800DE25FA /* AddPlant1ViewController.swift */,
 				D20CE5CB201C796900DE25FA /* Assets.xcassets */,
+				D20CE5FE201CBDD500DE25FA /* KindTableViewCell.swift */,
+				D20CE5FA201CBDAD00DE25FA /* PlantTableViewController.swift */,
 				D20CE5CD201C796900DE25FA /* LaunchScreen.storyboard */,
 				D20CE5D0201C796900DE25FA /* Info.plist */,
 			);
@@ -260,7 +275,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D20CE5C7201C796900DE25FA /* ViewController.swift in Sources */,
+				D22555F2201CC36E00C6E527 /* AddPlant2ViewController.swift in Sources */,
+				D22555F4201CD13A00C6E527 /* AddPlant3ViewController.swift in Sources */,
+				D20CE601201CBFE800DE25FA /* AddPlant1ViewController.swift in Sources */,
+				D20CE5FF201CBDD500DE25FA /* KindTableViewCell.swift in Sources */,
 				D20CE5C5201C796900DE25FA /* AppDelegate.swift in Sources */,
+				D20CE5FB201CBDAD00DE25FA /* PlantTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
