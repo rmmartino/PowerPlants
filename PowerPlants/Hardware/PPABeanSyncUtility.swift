@@ -12,7 +12,7 @@ import Bean_iOS_OSX_SDK
 protocol PPABeanSyncDelegate
 {
     func didConnectToBean(bean: PTDBean)
-    func didCollectMeasurement(bean: PTDBean, type: String, value: String)
+    func didCollectMeasurement(bean: PTDBean, temp: String, soil: String)
     func didDisconnectFromBean(bean: PTDBean)
 }
 
@@ -22,6 +22,7 @@ public class PPABeanSyncUtility: NSObject, PTDBeanManagerDelegate, PTDBeanDelega
     var beanyManager: PTDBeanManager?
     var yourBean: PTDBean?
     var lightState: Bool = false
+    var dataToOutput: String = ""
     
     var delegate: PPABeanSyncDelegate? = nil
     
@@ -75,7 +76,7 @@ public class PPABeanSyncUtility: NSObject, PTDBeanManagerDelegate, PTDBeanDelega
         {
             print("connecting...")
             yourBean = bean
-           connectToBean(bean: yourBean!)
+            connectToBean(bean: yourBean!)
         }
     }
 
@@ -109,6 +110,7 @@ public class PPABeanSyncUtility: NSObject, PTDBeanManagerDelegate, PTDBeanDelega
     {
         print("DWDwddw")
         var str = String.init(data: data, encoding: String.Encoding.ascii)
+        
         if(str != "\n" && str != "\r")
         {
             if let output = str
@@ -117,12 +119,12 @@ public class PPABeanSyncUtility: NSObject, PTDBeanManagerDelegate, PTDBeanDelega
                 let array = output.components(separatedBy: ":")
                 if(array.count == 2)
                 {
-                    var key = array[0]
-                    var val = array[1]
+                    var temp = array[0]
+                    var soil = array[1]
                     
-                    delegate?.didCollectMeasurement(bean: bean, type: key, value: val)
-                    
-                    print("\(key): \(val)")
+                    delegate?.didCollectMeasurement(bean: bean, temp: "\(temp)", soil: "\(soil)")
+                  
+                    print("\(temp) : \(soil) ")
                 }
             }
         }
