@@ -9,13 +9,11 @@
 import Foundation
 import Bean_iOS_OSX_SDK
 
-
-
-
 protocol PPABeanSyncDelegate
 {
     func didConnectToBean(bean: PTDBean)
     func didCollectMeasurement(bean: PTDBean, type: String, value: String)
+    func didDisconnectFromBean(bean: PTDBean)
 }
 
 public class PPABeanSyncUtility: NSObject, PTDBeanManagerDelegate, PTDBeanDelegate
@@ -34,9 +32,7 @@ public class PPABeanSyncUtility: NSObject, PTDBeanManagerDelegate, PTDBeanDelega
         super.init()
         beanyManager = PTDBeanManager()
         beanyManager?.delegate = self
-        
     }
-    
     
     func startScanning()
     {
@@ -75,7 +71,6 @@ public class PPABeanSyncUtility: NSObject, PTDBeanManagerDelegate, PTDBeanDelega
         
         print("Found a Bean: \(bean.name)")
         
-        
         if bean.name == "Bean"
         {
             print("connecting...")
@@ -88,7 +83,6 @@ public class PPABeanSyncUtility: NSObject, PTDBeanManagerDelegate, PTDBeanDelega
     {
         var error: NSError?
         beanyManager?.connect(to: bean, withOptions: [:], error: &error)
-        
         
         if error != nil
         {
@@ -132,26 +126,10 @@ public class PPABeanSyncUtility: NSObject, PTDBeanManagerDelegate, PTDBeanDelega
                 }
             }
         }
-        
-        
     }
     
     public func beanManager(_ beanManager: PTDBeanManager!, didConnect bean: PTDBean!, error: Error!)
     {
         bean.delegate = self as! PTDBeanDelegate
     }
-    
-    
 }
-
-
-
-
-
-
-
-
-
-
-    
-
