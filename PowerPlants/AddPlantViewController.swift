@@ -1,5 +1,5 @@
 //
-//  AddPlant3ViewController.swift
+//  AddPlantViewController.swift
 //  PowerPlants
 //
 //  Created by Alyssa Schilke on 1/27/18.
@@ -7,21 +7,28 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
-class AddPlant3ViewController: UIViewController {
+class AddPlantViewController: UIViewController {
 
-    @IBOutlet weak var nameTitleLabel: UILabel!
-    @IBOutlet weak var nameEntryLabel: UILabel!
-    @IBOutlet weak var kindTitleLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var nameEntryField: UITextField!
     
-    //nameEntryLabel.text = AddPlant2ViewControllerplantName
+    @IBOutlet var NextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func saveTextToVar(sender: UIButton) {
+        let plantName = nameEntryField.text
+    }
+    //to datbase function
+    let db = Firestore.firestore()
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
