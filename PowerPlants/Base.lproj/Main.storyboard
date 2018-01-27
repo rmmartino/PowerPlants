@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlantTableViewCell" rowHeight="90" id="1T9-nS-CAp" customClass="PlantTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlantTableViewCell" rowHeight="90" id="1T9-nS-CAp" customClass="PlantTableViewCell" customModule="PowerPlants" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1T9-nS-CAp" id="w31-O6-lXL">
@@ -55,13 +55,16 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="happyPlantImage" destination="qSC-Dd-l1e" id="0RL-a9-0m1"/>
+                                    <outlet property="plantNameLabel" destination="u2z-aE-XYh" id="VJf-yp-A6G"/>
+                                    <outlet property="plantTypeLabel" destination="3ZF-ht-gnm" id="7KU-pU-Fva"/>
                                     <segue destination="H1W-X6-AkS" kind="showDetail" id="ZUa-i8-Nub"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="hnf-3V-86E" id="18z-JT-3Of"/>
-                            <outlet property="delegate" destination="hnf-3V-86E" id="dIt-O4-b9P"/>
+                            <outlet property="dataSource" destination="hnf-3V-86E" id="pOJ-UV-abn"/>
+                            <outlet property="delegate" destination="hnf-3V-86E" id="RUa-CJ-Ftp"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="PowerPlant" id="zJm-JC-EM9"/>
@@ -79,16 +82,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9QC-ZC-TPR">
-                                <rect key="frame" x="20" y="64" width="374" height="155"/>
+                                <rect key="frame" x="20" y="20" width="374" height="243"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fitzgerad Planticus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Lj-Bf-aEu">
-                                <rect key="frame" x="20" y="247" width="374" height="47"/>
+                                <rect key="frame" x="20" y="291" width="374" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spikey Succulent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OM1-Dw-hMU">
-                                <rect key="frame" x="20" y="293" width="255" height="44"/>
+                                <rect key="frame" x="20" y="337" width="255" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="sx7-qd-gxA"/>
                                 </constraints>
@@ -97,7 +100,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Readings widgt goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTO-QD-3uA">
-                                <rect key="frame" x="42" y="415" width="312" height="21"/>
+                                <rect key="frame" x="42" y="459" width="312" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -541,6 +544,6 @@
         <image name="PowerPlantPuppet2.0" width="3744" height="4071"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DVg-Si-b1W"/>
+        <segue reference="ZUa-i8-Nub"/>
     </inferredMetricsTieBreakers>
 </document>

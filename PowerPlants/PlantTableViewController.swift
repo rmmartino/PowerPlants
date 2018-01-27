@@ -12,7 +12,7 @@ import FirebaseStorage
 
 class PlantTableViewController: UITableViewController {
 
-    
+    var snapshot: [QueryDocumentSnapshot] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
