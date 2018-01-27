@@ -10,10 +10,9 @@ import UIKit
 
 class AddPlant1ViewController: UIViewController {
     var plantName: String? = nil
-    @IBOutlet weak var step1Label: UILabel!
-    
     @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var NextButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         plantName = String()
