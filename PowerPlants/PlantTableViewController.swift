@@ -10,11 +10,7 @@ import UIKit
 
 class PlantTableViewController: UITableViewController {
 
-    @IBOutlet weak var cellPlantName: UILabel!
-    @IBOutlet weak var plantPhoto: UIImageView!
-    @IBOutlet weak var cellPlantKind: UILabel!
     
-    @IBOutlet weak var PlantCell: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

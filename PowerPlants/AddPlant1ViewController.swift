@@ -26,7 +26,7 @@ class AddPlant1ViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func PressNext(_ sender: UIButton) {
-        let plantName = nameField.text
+        //let plantName = nameField.text
     }
     
     /*
