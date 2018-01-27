@@ -157,13 +157,13 @@
 		D20CE5C3201C796900DE25FA /* PowerPlants */ = {
 			isa = PBXGroup;
 			children = (
-				D22555FD201CE08200C6E527 /* AddPlant2_5ViewController.swift */,
 				D20CE5C4201C796900DE25FA /* AppDelegate.swift */,
 				D20CE5C6201C796900DE25FA /* ViewController.swift */,
-				D22555F3201CD13A00C6E527 /* AddPlant3ViewController.swift */,
 				D20CE5C8201C796900DE25FA /* Main.storyboard */,
 				D2255601201CE5E300C6E527 /* LoginReturningViewController.swift */,
 				D22555FF201CE23900C6E527 /* LoginCreateViewController.swift */,
+				D22555F3201CD13A00C6E527 /* AddPlant3ViewController.swift */,
+				D22555FD201CE08200C6E527 /* AddPlant2_5ViewController.swift */,
 				D22555F1201CC36E00C6E527 /* AddPlant2ViewController.swift */,
 				D20CE600201CBFE800DE25FA /* AddPlant1ViewController.swift */,
 				D20CE5CB201C796900DE25FA /* Assets.xcassets */,

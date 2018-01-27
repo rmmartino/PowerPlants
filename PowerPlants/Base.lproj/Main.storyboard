@@ -79,16 +79,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9QC-ZC-TPR">
-                                <rect key="frame" x="20" y="64" width="374" height="155"/>
+                                <rect key="frame" x="20" y="20" width="374" height="243"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fitzgerad Planticus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Lj-Bf-aEu">
-                                <rect key="frame" x="20" y="247" width="374" height="47"/>
+                                <rect key="frame" x="20" y="291" width="374" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spikey Succulent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OM1-Dw-hMU">
-                                <rect key="frame" x="20" y="293" width="255" height="44"/>
+                                <rect key="frame" x="20" y="337" width="255" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="sx7-qd-gxA"/>
                                 </constraints>
@@ -97,7 +97,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Readings widgt goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTO-QD-3uA">
-                                <rect key="frame" x="42" y="415" width="312" height="21"/>
+                                <rect key="frame" x="42" y="459" width="312" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -408,7 +408,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="4gy-wa-FFr" kind="show" id="bfc-Po-vc2"/>
+                                    <action selector="press_Next:" destination="pTa-Yg-f4N" eventType="touchUpInside" id="oHj-es-YPP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -427,10 +427,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G6V-o8-gfm"/>
                     </view>
+                    <connections>
+                        <outlet property="PasswordPrompt" destination="jTb-bG-Je6" id="zdB-Qv-cbp"/>
+                        <outlet property="passwordField" destination="ghM-5y-Bfu" id="zQ3-6i-9JH"/>
+                        <outlet property="userNameField" destination="wSo-au-YZx" id="Kek-nA-HqN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ish-NT-3ab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1967" y="159"/>
+            <point key="canvasLocation" x="-1968.1159420289857" y="158.96739130434784"/>
         </scene>
         <!--Login Create View Controller-->
         <scene sceneID="uLT-Sn-ECO">
@@ -541,6 +546,6 @@
         <image name="PowerPlantPuppet2.0" width="3744" height="4071"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DVg-Si-b1W"/>
+        <segue reference="ZUa-i8-Nub"/>
     </inferredMetricsTieBreakers>
 </document>
