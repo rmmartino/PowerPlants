@@ -157,6 +157,7 @@
 		D20CE5C3201C796900DE25FA /* PowerPlants */ = {
 			isa = PBXGroup;
 			children = (
+				D2255603201D026100C6E527 /* Model */,
 				D22555FD201CE08200C6E527 /* AddPlant2_5ViewController.swift */,
 				D20CE5C4201C796900DE25FA /* AppDelegate.swift */,
 				D20CE5C6201C796900DE25FA /* ViewController.swift */,
@@ -193,6 +194,13 @@
 				D20CE5E6201C796900DE25FA /* Info.plist */,
 			);
 			path = PowerPlantsUITests;
+			sourceTree = "<group>";
+		};
+		D2255603201D026100C6E527 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
