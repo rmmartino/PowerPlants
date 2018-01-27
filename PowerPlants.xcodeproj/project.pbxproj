@@ -23,6 +23,10 @@
 		D22555F2201CC36E00C6E527 /* AddPlant2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555F1201CC36E00C6E527 /* AddPlant2ViewController.swift */; };
 		D22555F4201CD13A00C6E527 /* AddPlant3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555F3201CD13A00C6E527 /* AddPlant3ViewController.swift */; };
 		D22555F8201CD9F400C6E527 /* PlantProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555F7201CD9F300C6E527 /* PlantProfileViewController.swift */; };
+		D22555FA201CDDEE00C6E527 /* PlantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555F9201CDDEE00C6E527 /* PlantTableViewCell.swift */; };
+		D22555FE201CE08300C6E527 /* AddPlant2_5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555FD201CE08200C6E527 /* AddPlant2_5ViewController.swift */; };
+		D2255600201CE23900C6E527 /* LoginCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555FF201CE23900C6E527 /* LoginCreateViewController.swift */; };
+		D2255602201CE5E300C6E527 /* LoginReturningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2255601201CE5E300C6E527 /* LoginReturningViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		D22555F1201CC36E00C6E527 /* AddPlant2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlant2ViewController.swift; sourceTree = "<group>"; };
 		D22555F3201CD13A00C6E527 /* AddPlant3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlant3ViewController.swift; sourceTree = "<group>"; };
 		D22555F7201CD9F300C6E527 /* PlantProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantProfileViewController.swift; sourceTree = "<group>"; };
+		D22555F9201CDDEE00C6E527 /* PlantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantTableViewCell.swift; sourceTree = "<group>"; };
+		D22555FD201CE08200C6E527 /* AddPlant2_5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddPlant2_5ViewController.swift; path = "/Users/alyssaschilke/OneDrive - Loyola University Maryland/HackathonTake2/PowerPlants/PowerPlants/AddPlant2_5ViewController.swift"; sourceTree = "<absolute>"; };
+		D22555FF201CE23900C6E527 /* LoginCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCreateViewController.swift; sourceTree = "<group>"; };
+		D2255601201CE5E300C6E527 /* LoginReturningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReturningViewController.swift; sourceTree = "<group>"; };
 		F87081E6A8BF7E074292ED08 /* Pods-PowerPlantsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerPlantsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerPlantsTests/Pods-PowerPlantsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB4333C7E51B8A528F3372DE /* Pods-PowerPlantsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerPlantsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PowerPlantsTests/Pods-PowerPlantsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,14 +157,19 @@
 		D20CE5C3201C796900DE25FA /* PowerPlants */ = {
 			isa = PBXGroup;
 			children = (
+				D2255603201D026100C6E527 /* Model */,
+				D22555FD201CE08200C6E527 /* AddPlant2_5ViewController.swift */,
 				D20CE5C4201C796900DE25FA /* AppDelegate.swift */,
 				D20CE5C6201C796900DE25FA /* ViewController.swift */,
 				D22555F3201CD13A00C6E527 /* AddPlant3ViewController.swift */,
 				D20CE5C8201C796900DE25FA /* Main.storyboard */,
+				D2255601201CE5E300C6E527 /* LoginReturningViewController.swift */,
+				D22555FF201CE23900C6E527 /* LoginCreateViewController.swift */,
 				D22555F1201CC36E00C6E527 /* AddPlant2ViewController.swift */,
 				D20CE600201CBFE800DE25FA /* AddPlant1ViewController.swift */,
 				D20CE5CB201C796900DE25FA /* Assets.xcassets */,
 				D20CE5FE201CBDD500DE25FA /* KindTableViewCell.swift */,
+				D22555F9201CDDEE00C6E527 /* PlantTableViewCell.swift */,
 				D20CE5FA201CBDAD00DE25FA /* PlantTableViewController.swift */,
 				D22555F7201CD9F300C6E527 /* PlantProfileViewController.swift */,
 				D20CE5CD201C796900DE25FA /* LaunchScreen.storyboard */,
@@ -181,6 +194,13 @@
 				D20CE5E6201C796900DE25FA /* Info.plist */,
 			);
 			path = PowerPlantsUITests;
+			sourceTree = "<group>";
+		};
+		D2255603201D026100C6E527 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,9 +515,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D20CE5C7201C796900DE25FA /* ViewController.swift in Sources */,
+				D22555FE201CE08300C6E527 /* AddPlant2_5ViewController.swift in Sources */,
 				D22555F2201CC36E00C6E527 /* AddPlant2ViewController.swift in Sources */,
+				D2255602201CE5E300C6E527 /* LoginReturningViewController.swift in Sources */,
+				D2255600201CE23900C6E527 /* LoginCreateViewController.swift in Sources */,
 				D22555F4201CD13A00C6E527 /* AddPlant3ViewController.swift in Sources */,
 				D20CE601201CBFE800DE25FA /* AddPlant1ViewController.swift in Sources */,
+				D22555FA201CDDEE00C6E527 /* PlantTableViewCell.swift in Sources */,
 				D22555F8201CD9F400C6E527 /* PlantProfileViewController.swift in Sources */,
 				D20CE5FF201CBDD500DE25FA /* KindTableViewCell.swift in Sources */,
 				D20CE5C5201C796900DE25FA /* AppDelegate.swift in Sources */,

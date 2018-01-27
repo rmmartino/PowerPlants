@@ -1,5 +1,5 @@
 //
-//  AddPlant1ViewController.swift
+//  LoginReturningViewController.swift
 //  PowerPlants
 //
 //  Created by Alyssa Schilke on 1/27/18.
@@ -8,28 +8,20 @@
 
 import UIKit
 
-class AddPlant1ViewController: UIViewController {
-    var plantName: String? = nil
-    @IBOutlet weak var step1Label: UILabel!
-    
-    @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var NextButton: UIButton!
+class LoginReturningViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        plantName = String()
+
         // Do any additional setup after loading the view.
     }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    // MARK: - Actions
     
-    @IBAction func PressNext(_ sender: UIButton) {
-        plantName = nameField.text
-        //send plantName to  dB
-    }
-    
+
     /*
     // MARK: - Navigation
 

@@ -17,7 +17,7 @@ class AddPlant3ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //nameEntryLabel.text = 
+        //let nameEntryLabel.text = get from database
         // Do any additional setup after loading the view.
     }
 
