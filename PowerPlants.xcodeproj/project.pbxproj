@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		22EC1F57F757BACD55865997 /* Pods_PowerPlantsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C9A2BCDDC63B6056C62883 /* Pods_PowerPlantsTests.framework */; };
 		7E0889F729FA9F4BED050046 /* Pods_PowerPlants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2952A1A5BBC3B275B30FFC5C /* Pods_PowerPlants.framework */; };
+		B31EC15D201CDA8B00DCE681 /* PPABeanSyncUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31EC15C201CDA8B00DCE681 /* PPABeanSyncUtility.swift */; };
 		C4CCCA15913602AC3AFAF887 /* Pods_PowerPlantsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46DE9953A63583274590CE55 /* Pods_PowerPlantsUITests.framework */; };
 		D20CE5C5201C796900DE25FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CE5C4201C796900DE25FA /* AppDelegate.swift */; };
 		D20CE5C7201C796900DE25FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CE5C6201C796900DE25FA /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 		46DE9953A63583274590CE55 /* Pods_PowerPlantsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PowerPlantsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		542718047543B0EF4105776E /* Pods-PowerPlantsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerPlantsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PowerPlantsUITests/Pods-PowerPlantsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		57C9A2BCDDC63B6056C62883 /* Pods_PowerPlantsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PowerPlantsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31EC15C201CDA8B00DCE681 /* PPABeanSyncUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPABeanSyncUtility.swift; sourceTree = "<group>"; };
 		BAC164A237EE2433A0368F2A /* Pods-PowerPlants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerPlants.release.xcconfig"; path = "Pods/Target Support Files/Pods-PowerPlants/Pods-PowerPlants.release.xcconfig"; sourceTree = "<group>"; };
 		C2C11E86C7B14B14E2A5B1BF /* Pods-PowerPlantsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerPlantsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerPlantsUITests/Pods-PowerPlantsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D20CE5C1201C796900DE25FA /* PowerPlants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerPlants.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B31EC15B201CDA5A00DCE681 /* Hardware */ = {
+			isa = PBXGroup;
+			children = (
+				B31EC15C201CDA8B00DCE681 /* PPABeanSyncUtility.swift */,
+			);
+			path = Hardware;
+			sourceTree = "<group>";
+		};
 		D20CE5B8201C796900DE25FA = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +157,7 @@
 		D20CE5C3201C796900DE25FA /* PowerPlants */ = {
 			isa = PBXGroup;
 			children = (
+				B31EC15B201CDA5A00DCE681 /* Hardware */,
 				D20CE5C4201C796900DE25FA /* AppDelegate.swift */,
 				D20CE5C6201C796900DE25FA /* ViewController.swift */,
 				D22555F3201CD13A00C6E527 /* AddPlant3ViewController.swift */,
@@ -419,6 +430,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PowerPlants/Pods-PowerPlants-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bean-iOS-OSX-SDK/Bean_iOS_OSX_SDK.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -432,6 +444,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bean_iOS_OSX_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -494,6 +507,7 @@
 				D20CE5C7201C796900DE25FA /* ViewController.swift in Sources */,
 				D22555F2201CC36E00C6E527 /* AddPlant2ViewController.swift in Sources */,
 				D22555F4201CD13A00C6E527 /* AddPlant3ViewController.swift in Sources */,
+				B31EC15D201CDA8B00DCE681 /* PPABeanSyncUtility.swift in Sources */,
 				D20CE601201CBFE800DE25FA /* AddPlant1ViewController.swift in Sources */,
 				D20CE5FF201CBDD500DE25FA /* KindTableViewCell.swift in Sources */,
 				D20CE5C5201C796900DE25FA /* AppDelegate.swift in Sources */,
@@ -665,6 +679,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R65ELCKB8X;
 				INFOPLIST_FILE = PowerPlants/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PowerPlants.app.PowerPlants;
@@ -680,6 +695,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R65ELCKB8X;
 				INFOPLIST_FILE = PowerPlants/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PowerPlants.app.PowerPlants;
