@@ -24,3 +24,5 @@ Join us on our journey as we make the world a better place worldwide.
 
 
 ![img_24f1c744b128-1](https://user-images.githubusercontent.com/22032496/35482471-dac65a4a-0403-11e8-8ed6-28ede422aacc.jpeg){:height="50%" width="50%"}
+
+<img src="https://user-images.githubusercontent.com/22032496/35482471-dac65a4a-0403-11e8-8ed6-28ede422aacc.jpeg" width=50%>
