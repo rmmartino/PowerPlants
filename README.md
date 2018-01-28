@@ -1,5 +1,5 @@
-## PowerPlants
-# HoyaHacks2018
+# PowerPlants
+## The World's most advanced plant monitoring system
 
 PowerPlants: Here to help the world GROW into a more healthy, nutrient oriented place. By using efficient object-oriented 
 software, and elegant class hierarchies, we have combined powerful cloud based technology and specialized IOT-enabled sensor 
@@ -23,3 +23,4 @@ In the future we hope to expand our add-on marketplace to include automated spri
 Join us on our journey as we make the world a better place worldwide.
 
 
+![img_24f1c744b128-1](https://user-images.githubusercontent.com/22032496/35482471-dac65a4a-0403-11e8-8ed6-28ede422aacc.jpeg){:height="50%" width="50%"}
