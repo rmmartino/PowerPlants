@@ -15,6 +15,14 @@ pod 'Firebase/Storage'
 pod 'FirebaseUI'
 pod 'GoogleSignIn'
 
+pod 'Eureka'
+pod 'BulletinBoard'
+
+pod 'Bohr'
+
+
+pod 'ImageRow', '~> 3.0'
+
   target 'PowerPlantsTests' do
     inherit! :search_paths
     # Pods for testing

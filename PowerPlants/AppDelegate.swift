@@ -21,9 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         // Override point for customization after application launch.
+    
+        if(Auth.auth().currentUser != nil){
+            self.window?.rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView")
+        }
         
-        
-        PPABeanSyncUtility.shared.startScanning()
         
         return true
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-
+import FirebaseAuth
 import FirebaseAuthUI
 import FirebaseGoogleAuthUI
 import FirebaseFacebookAuthUI
@@ -20,9 +20,11 @@ class WelcomeViewController: UIViewController, FUIAuthDelegate {
     var authUI: FUIAuth? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         // You need to adopt a FUIAuthDelegate protocol to receive callback
         authUI = FUIAuth.defaultAuthUI()
+        
         authUI?.delegate = self
         
         let providers: [FUIAuthProvider] = [
@@ -31,7 +33,14 @@ class WelcomeViewController: UIViewController, FUIAuthDelegate {
         self.authUI?.providers = providers
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+
+    }
+    
     @IBAction func Login_Button(_ sender: Any) {
+
+        
         let authViewController = authUI!.authViewController()
         self.present(authViewController, animated: true, completion: nil)
     }

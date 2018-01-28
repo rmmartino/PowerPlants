@@ -9,13 +9,62 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseStorage
+import BulletinBoard
+import Bean_iOS_OSX_SDK
 
-class PlantTableViewController: UITableViewController {
-
+class PlantTableViewController: UITableViewController, PTDBeanManagerDelegate, PTDBeanDelegate {
+    var linkAlertUp = false
+    var beanyManager: PTDBeanManager?
+    var linkedBean: PTDBean?
+    
+    lazy var bulletinManager: BulletinManager = {
+ 
+        let connectPage = PageBulletinItem(title: "Found PowerSeed")
+        connectPage.image = UIImage.init(named: "beanimg")
+        connectPage.descriptionText = "Let's link your PowerSeed Sensor"
+        connectPage.actionButtonTitle = "Link Now"
+        connectPage.alternativeButtonTitle = "Not now"
+        connectPage.actionHandler = { (item: PageBulletinItem) in
+            print("Action button tapped")
+            self.linkAlertUp = false
+            var error: NSError?
+            
+            item.manager?.dismissBulletin(animated: true)
+            self.beanyManager?.stopScanning(forBeans_error: &error)
+            self.openPlantForm()
+        }
+        
+        connectPage.alternativeHandler = { (item: PageBulletinItem) in
+            print("Close")
+            self.linkAlertUp = false
+            item.manager?.dismissBulletin(animated:true)
+        }
+        
+      
+        connectPage.isDismissable = false
+        
+        let rootItem: BulletinItem = connectPage
+        
+        
+        return BulletinManager(rootItem: rootItem)
+        
+    }()
+    
+    
     var snapshot: [QueryDocumentSnapshot] = []
+
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        
+        beanyManager = PTDBeanManager()
+        
+         beanyManager?.delegate = self
+       
+        
+        
 
         let db = Firestore.firestore()
         
@@ -35,9 +84,85 @@ class PlantTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         
+    
+       
+        
+    
+
         tableView.reloadData()
     }
-
+    
+    func openPlantForm(){
+        let pform = AddPlantFormController.init()
+        pform.seedUUID = linkedBean?.identifier.uuidString
+        let navigationController = UINavigationController(rootViewController: pform)
+        self.present(navigationController, animated: true, completion: nil)
+        
+    }
+    
+    var knownSensors: [QueryDocumentSnapshot]? = nil
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let db = Firestore.firestore()
+        let sensorsRef = db.collection("users/5BI75Xa099RRvnkekLoyIJO2xWv2/sensors")
+        sensorsRef.getDocuments { (docs, err) in
+            if let sensors = docs {
+                self.knownSensors = sensors.documents
+                self.attemptAdd()
+            }
+        }
+  
+    }
+    
+    func attemptAdd(){
+        doScan {
+            self.linkAlertUp = true
+            self.bulletinManager.prepare()
+            self.bulletinManager.presentBulletin(above: self)
+        }
+    }
+    
+    var doneCallback: (() -> Void)? = nil
+    func doScan(done: @escaping () -> Void) {
+        // function body goes here
+        doneCallback = done
+        var error: NSError?
+        
+        self.beanyManager?.startScanning(forBeans_error: &error)
+        if(error != nil){
+            print("ERR")
+        }
+    }
+    
+    func beanManager(_ beanManager: PTDBeanManager!, didDiscover bean: PTDBean!, error: Error!) {
+        print("Found Bean \(bean.identifier.uuidString)")
+        
+        if knownSensors != nil {
+            for sen in knownSensors! {
+                if(sen.get("uuid") as! String == bean.identifier.uuidString){
+                    return;
+                }
+            }
+        }
+        
+        var error: NSError?
+        beanManager.connect(to: bean, withOptions: [:], error: &error)
+        var stoperror: NSError?
+        linkedBean = bean
+        self.beanyManager?.stopScanning(forBeans_error: &stoperror)
+        self.doneCallback?()
+    }
+    
+    func beanManager(_ beanManager: PTDBeanManager!, didDisconnectBean bean: PTDBean!, error: Error!) {
+        if(linkAlertUp){
+            linkAlertUp = false
+            bulletinManager.dismissBulletin(animated: true)
+        }
+        attemptAdd()
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -64,7 +189,8 @@ class PlantTableViewController: UITableViewController {
         cell.plantNameLabel.text = "\(plantName)"
         
         let plantType = plant.get("plant_type") as! String
-        cell.plantTypeLabel.text = "\(plantType)"
+        let location = plant.get("location") as! String
+        cell.plantTypeLabel.text = "\(plantType) - \(location)"
         
         let storage = Storage.storage()
         let storageRef = storage.reference()
@@ -103,7 +229,10 @@ class PlantTableViewController: UITableViewController {
         return 100
     }
     
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

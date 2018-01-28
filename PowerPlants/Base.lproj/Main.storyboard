@@ -1,64 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="diL-6A-Crh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14087.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="diL-6A-Crh">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14075.4"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--PowerPlant-->
+        <!--Plants-->
         <scene sceneID="zAn-hR-Cb1">
             <objects>
                 <tableViewController id="hnf-3V-86E" customClass="PlantTableViewController" customModule="PowerPlants" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oBe-85-rXS">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="oBe-85-rXS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.87246110294298251" green="0.90050592347176417" blue="0.92278835903177603" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlantTableViewCell" rowHeight="90" id="1T9-nS-CAp" customClass="PlantTableViewCell" customModule="PowerPlants" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1T9-nS-CAp" id="w31-O6-lXL">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make match Plant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2z-aE-XYh">
-                                            <rect key="frame" x="155" y="11" width="186" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="99.666666666666686" y="23" width="227" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="PowerPlantHappy" translatesAutoresizingMaskIntoConstraints="NO" id="qSC-Dd-l1e">
-                                            <rect key="frame" x="0.0" y="0.0" width="135" height="90"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZF-ht-gnm">
+                                            <rect key="frame" x="99.666666666666671" y="43.333333333333336" width="41.666666666666671" height="21.000000000000007"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.57840121761298735" green="0.59699363197606647" blue="0.61176585255509219" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="PowerPlantHappy" translatesAutoresizingMaskIntoConstraints="NO" id="qSC-Dd-l1e">
+                                            <rect key="frame" x="10" y="10" width="69.666666666666671" height="69.666666666666671"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="qSC-Dd-l1e" secondAttribute="height" multiplier="1:1" id="fbq-bO-PQa"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZF-ht-gnm">
-                                            <rect key="frame" x="160" y="40" width="186" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="qSC-Dd-l1e" firstAttribute="top" secondItem="w31-O6-lXL" secondAttribute="top" id="ACX-vD-nSq"/>
-                                        <constraint firstItem="u2z-aE-XYh" firstAttribute="top" secondItem="w31-O6-lXL" secondAttribute="topMargin" id="MWV-lJ-hyv"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="u2z-aE-XYh" secondAttribute="trailing" constant="53" id="f6R-Sh-9cx"/>
-                                        <constraint firstItem="qSC-Dd-l1e" firstAttribute="leading" secondItem="w31-O6-lXL" secondAttribute="leading" id="qdy-rN-VSv"/>
+                                        <constraint firstItem="3ZF-ht-gnm" firstAttribute="leading" secondItem="u2z-aE-XYh" secondAttribute="leading" id="3Qc-hs-cda"/>
+                                        <constraint firstItem="qSC-Dd-l1e" firstAttribute="top" secondItem="w31-O6-lXL" secondAttribute="top" constant="10" id="ACX-vD-nSq"/>
+                                        <constraint firstAttribute="bottom" secondItem="qSC-Dd-l1e" secondAttribute="bottom" constant="10" id="EsW-DA-w9I"/>
+                                        <constraint firstItem="3ZF-ht-gnm" firstAttribute="centerY" secondItem="w31-O6-lXL" secondAttribute="centerY" constant="10" id="lyg-ML-xqf"/>
+                                        <constraint firstItem="qSC-Dd-l1e" firstAttribute="leading" secondItem="w31-O6-lXL" secondAttribute="leading" constant="10" id="qdy-rN-VSv"/>
+                                        <constraint firstItem="u2z-aE-XYh" firstAttribute="centerY" secondItem="w31-O6-lXL" secondAttribute="centerY" constant="-10" id="rrg-RH-ZS7"/>
                                         <constraint firstItem="qSC-Dd-l1e" firstAttribute="centerY" secondItem="w31-O6-lXL" secondAttribute="centerY" id="vDQ-15-NX2"/>
                                         <constraint firstItem="u2z-aE-XYh" firstAttribute="leading" secondItem="qSC-Dd-l1e" secondAttribute="trailing" constant="20" id="wyj-eV-OEz"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.97530043125152588" green="0.97527122497558594" blue="0.9752877950668335" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="happyPlantImage" destination="qSC-Dd-l1e" id="0RL-a9-0m1"/>
                                     <outlet property="plantNameLabel" destination="u2z-aE-XYh" id="VJf-yp-A6G"/>
                                     <outlet property="plantTypeLabel" destination="3ZF-ht-gnm" id="7KU-pU-Fva"/>
-                                    <segue destination="H1W-X6-AkS" kind="show" id="bPx-gW-OZY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -67,253 +70,11 @@
                             <outlet property="delegate" destination="hnf-3V-86E" id="RUa-CJ-Ftp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="PowerPlant" id="zJm-JC-EM9">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="9Ux-fq-9z1">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="035-UM-FpJ">
-                                <rect key="frame" x="302" y="7" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add New">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="2rq-wI-eXW" kind="show" id="v7P-y4-RNp"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Plants" id="zJm-JC-EM9"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SxD-2m-oK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-384" y="122"/>
-        </scene>
-        <!--Plant Profile View Controller-->
-        <scene sceneID="5tC-D8-3Tq">
-            <objects>
-                <viewController id="H1W-X6-AkS" customClass="PlantProfileViewController" customModule="PowerPlants" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="x5T-si-Ee2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PowerPlantHappy" translatesAutoresizingMaskIntoConstraints="NO" id="9QC-ZC-TPR">
-                                <rect key="frame" x="20" y="64" width="374" height="199"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fitzgerad Planticus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Lj-Bf-aEu">
-                                <rect key="frame" x="20" y="291" width="374" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spikey Succulent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OM1-Dw-hMU">
-                                <rect key="frame" x="20" y="337" width="255" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="sx7-qd-gxA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Readings widgt goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTO-QD-3uA">
-                                <rect key="frame" x="42" y="459" width="312" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="OM1-Dw-hMU" firstAttribute="leading" secondItem="5Lj-Bf-aEu" secondAttribute="leading" id="56n-mF-hnb"/>
-                            <constraint firstItem="qQD-m6-b3c" firstAttribute="trailing" secondItem="HTO-QD-3uA" secondAttribute="trailing" constant="60" id="9qe-Ov-aij"/>
-                            <constraint firstItem="qQD-m6-b3c" firstAttribute="trailing" secondItem="OM1-Dw-hMU" secondAttribute="trailing" constant="139" id="AE6-iM-9oC"/>
-                            <constraint firstItem="qQD-m6-b3c" firstAttribute="trailing" secondItem="9QC-ZC-TPR" secondAttribute="trailing" constant="20" id="BwM-UW-8A2"/>
-                            <constraint firstItem="5Lj-Bf-aEu" firstAttribute="top" secondItem="9QC-ZC-TPR" secondAttribute="bottom" constant="28" id="CPz-as-OkE"/>
-                            <constraint firstItem="qQD-m6-b3c" firstAttribute="bottom" secondItem="9QC-ZC-TPR" secondAttribute="bottom" constant="473" id="DGA-AI-R2k"/>
-                            <constraint firstItem="HTO-QD-3uA" firstAttribute="top" secondItem="OM1-Dw-hMU" secondAttribute="bottom" constant="78" id="IId-vT-g6Z"/>
-                            <constraint firstItem="HTO-QD-3uA" firstAttribute="leading" secondItem="qQD-m6-b3c" secondAttribute="leading" constant="42" id="LJA-HD-gho"/>
-                            <constraint firstItem="qQD-m6-b3c" firstAttribute="bottom" secondItem="5Lj-Bf-aEu" secondAttribute="bottom" constant="398" id="N0I-vT-B6d"/>
-                            <constraint firstItem="OM1-Dw-hMU" firstAttribute="top" secondItem="9QC-ZC-TPR" secondAttribute="bottom" constant="74" id="O8F-gj-8ZA"/>
-                            <constraint firstItem="qQD-m6-b3c" firstAttribute="bottom" secondItem="OM1-Dw-hMU" secondAttribute="bottom" constant="355" id="dne-o0-L9e"/>
-                            <constraint firstItem="9QC-ZC-TPR" firstAttribute="top" secondItem="qQD-m6-b3c" secondAttribute="top" id="j3I-yz-f5x"/>
-                            <constraint firstItem="OM1-Dw-hMU" firstAttribute="leading" secondItem="x5T-si-Ee2" secondAttribute="leadingMargin" id="jny-xY-rrv"/>
-                            <constraint firstItem="OM1-Dw-hMU" firstAttribute="leading" secondItem="9QC-ZC-TPR" secondAttribute="leading" id="wUP-2E-Vop"/>
-                            <constraint firstItem="9QC-ZC-TPR" firstAttribute="trailing" secondItem="5Lj-Bf-aEu" secondAttribute="trailing" id="ywe-Fr-wCh"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="qQD-m6-b3c"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="brz-8s-Vtq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="515.94202898550725" y="121.46739130434784"/>
-        </scene>
-        <!--NewPlant-->
-        <scene sceneID="FOX-37-tZd">
-            <objects>
-                <viewController title="NewPlant" id="2rq-wI-eXW" customClass="AddPlant1ViewController" customModule="PowerPlants" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4s4-9U-TMT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVI-sr-UmA">
-                                <rect key="frame" x="176" y="356.66666666666669" width="63" height="49"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" red="0.22352941179999999" green="0.51764705879999995" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="PressNext:" destination="2rq-wI-eXW" eventType="touchUpInside" id="e0f-tf-puN"/>
-                                    <segue destination="Wso-Zm-GTl" kind="show" identifier="StepTwo" id="uC8-eh-71G"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r2T-z0-NkD">
-                                <rect key="frame" x="20" y="252" width="374" height="43"/>
-                                <color key="textColor" red="0.22352941179999999" green="0.51764705879999995" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="ZVI-sr-UmA" firstAttribute="centerX" secondItem="DJJ-sn-Rrh" secondAttribute="centerX" id="A3t-b0-nSY"/>
-                            <constraint firstItem="DJJ-sn-Rrh" firstAttribute="trailing" secondItem="r2T-z0-NkD" secondAttribute="trailing" constant="20" id="CzQ-db-gNb"/>
-                            <constraint firstItem="ZVI-sr-UmA" firstAttribute="centerY" secondItem="DJJ-sn-Rrh" secondAttribute="centerY" constant="-19" id="c55-Ii-Euv"/>
-                            <constraint firstItem="r2T-z0-NkD" firstAttribute="top" secondItem="DJJ-sn-Rrh" secondAttribute="top" constant="188" id="pQK-cq-iy4"/>
-                            <constraint firstItem="r2T-z0-NkD" firstAttribute="centerX" secondItem="DJJ-sn-Rrh" secondAttribute="centerX" id="t4C-OW-M0p"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="DJJ-sn-Rrh"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Step 1: Name Your Plant" id="B80-mW-8Bg"/>
-                    <connections>
-                        <outlet property="NextButton" destination="ZVI-sr-UmA" id="mTG-SK-tO9"/>
-                        <outlet property="nameField" destination="r2T-z0-NkD" id="pPH-H5-LKS"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wGZ-OK-MGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-383" y="880"/>
-        </scene>
-        <!--Step 2: What Kind of Plant?-->
-        <scene sceneID="Zbu-m3-Aaf">
-            <objects>
-                <viewController id="Wso-Zm-GTl" customClass="AddPlant2ViewController" customModule="PowerPlants" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="udH-ry-ykq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zkZ-Uk-edO">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="KindTableViewCell" id="GaU-Kb-nfJ" customClass="KindTableViewCell" customModule="PowerPlants" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GaU-Kb-nfJ" id="Fe5-SJ-U4m">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kind" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sT-nd-u72">
-                                                    <rect key="frame" x="15" y="0.0" width="167" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="plantKindLabel" destination="1sT-nd-u72" id="meT-Hn-zj9"/>
-                                            <segue destination="EKn-5d-MKs" kind="show" id="XvJ-2T-N0C"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="Wso-Zm-GTl" id="pzK-is-aRi"/>
-                                    <outlet property="delegate" destination="Wso-Zm-GTl" id="zbP-t1-5MQ"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="XCr-By-5r9"/>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Step 2: What Kind of Plant?" id="Gh7-mq-DX8">
-                        <barButtonItem key="backBarButtonItem" title="Step 2" id="JwP-Se-oW3"/>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="tableView" destination="zkZ-Uk-edO" id="uiS-xB-HP1"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JHT-S5-pn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="489.85507246376818" y="880.43478260869574"/>
-        </scene>
-        <!--Take a Picture!-->
-        <scene sceneID="6BL-A0-DVH">
-            <objects>
-                <viewController id="EKn-5d-MKs" customClass="AddPlant2_5ViewController" customModule="PowerPlants" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gJ3-vf-XKB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bNB-QU-89f">
-                                <rect key="frame" x="6" y="64" width="402" height="293"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJg-LO-2hA">
-                                <rect key="frame" x="55" y="516" width="305" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Open Photo Library"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8b-fJ-S9E">
-                                <rect key="frame" x="101" y="425" width="213" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="1jr-sm-5db"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Open Camera"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDG-iD-a5T">
-                                <rect key="frame" x="121" y="609" width="173" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="eaY-Dq-zFe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <segue destination="H1W-X6-AkS" kind="show" id="DVg-Si-b1W"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="bNB-QU-89f" firstAttribute="top" secondItem="E7A-OI-1n8" secondAttribute="top" id="0io-pp-0t7"/>
-                            <constraint firstItem="cDG-iD-a5T" firstAttribute="top" secondItem="B8b-fJ-S9E" secondAttribute="bottom" constant="154" id="3x4-TM-D4l"/>
-                            <constraint firstItem="CJg-LO-2hA" firstAttribute="leading" secondItem="E7A-OI-1n8" secondAttribute="leading" constant="55" id="3yv-ob-Xj5"/>
-                            <constraint firstItem="E7A-OI-1n8" firstAttribute="bottom" secondItem="bNB-QU-89f" secondAttribute="bottom" constant="335" id="DCt-CW-hVP"/>
-                            <constraint firstItem="CJg-LO-2hA" firstAttribute="centerX" secondItem="E7A-OI-1n8" secondAttribute="centerX" id="DsS-Id-Kk0"/>
-                            <constraint firstItem="bNB-QU-89f" firstAttribute="centerX" secondItem="E7A-OI-1n8" secondAttribute="centerX" id="HyJ-vL-mwk"/>
-                            <constraint firstItem="cDG-iD-a5T" firstAttribute="leading" secondItem="E7A-OI-1n8" secondAttribute="leading" constant="121" id="MKe-3N-x9e"/>
-                            <constraint firstItem="E7A-OI-1n8" firstAttribute="bottom" secondItem="CJg-LO-2hA" secondAttribute="bottom" constant="125" id="QRG-vc-Dna"/>
-                            <constraint firstItem="bNB-QU-89f" firstAttribute="leading" secondItem="E7A-OI-1n8" secondAttribute="leading" constant="6" id="RWu-X4-ctk"/>
-                            <constraint firstItem="B8b-fJ-S9E" firstAttribute="leading" secondItem="E7A-OI-1n8" secondAttribute="leading" constant="101" id="SHj-6X-aNr"/>
-                            <constraint firstItem="B8b-fJ-S9E" firstAttribute="centerX" secondItem="E7A-OI-1n8" secondAttribute="centerX" id="TP4-gC-m2i"/>
-                            <constraint firstItem="CJg-LO-2hA" firstAttribute="top" secondItem="B8b-fJ-S9E" secondAttribute="bottom" constant="61" id="kYi-EA-skq"/>
-                            <constraint firstItem="CJg-LO-2hA" firstAttribute="centerX" secondItem="E7A-OI-1n8" secondAttribute="centerX" id="nld-6t-aMp"/>
-                            <constraint firstItem="CJg-LO-2hA" firstAttribute="leading" secondItem="E7A-OI-1n8" secondAttribute="leading" constant="55" id="ow4-Q9-opo"/>
-                            <constraint firstItem="cDG-iD-a5T" firstAttribute="centerX" secondItem="E7A-OI-1n8" secondAttribute="centerX" id="tQl-BT-oMh"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="E7A-OI-1n8"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Take a Picture!" id="ldF-uF-Z7V">
-                        <barButtonItem key="backBarButtonItem" title="Step 3" id="rYR-QK-6N7"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="imagePicker" destination="bNB-QU-89f" id="1yc-8i-BL1"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3eu-fJ-5lp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1271.0144927536232" y="874.72826086956525"/>
+            <point key="canvasLocation" x="567" y="-207"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="p0I-qP-vTh">
@@ -339,7 +100,7 @@
                                 </state>
                                 <connections>
                                     <action selector="Login_Button:" destination="diL-6A-Crh" eventType="touchUpInside" id="vK5-an-Ga2"/>
-                                    <segue destination="Io2-O0-Hxz" kind="show" identifier="WelcomeToNavCtrl" id="VPq-TE-O5X"/>
+                                    <segue destination="Mn9-sW-j1J" kind="show" identifier="WelcomeToNavCtrl" id="VPq-TE-O5X"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to PowerPlants!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZL-7w-uBB">
@@ -360,15 +121,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnr-GY-5vI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2101" y="740"/>
+            <point key="canvasLocation" x="-2407" y="121"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Plants-->
         <scene sceneID="fhq-Gh-U1N">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Io2-O0-Hxz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Plants" image="icons8-potted-plant-50" id="3ef-i1-OER"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Cc-SP-rfk">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="2Cc-SP-rfk">
+                        <rect key="frame" x="0.0" y="20" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.22352941179999999" green="0.51764705879999995" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -386,14 +148,78 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nT8-Uw-u3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1111" y="963"/>
+            <point key="canvasLocation" x="-300" y="120.65217391304348"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="om1-Uo-CAv">
+            <objects>
+                <navigationController id="vNp-FE-oSt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-services-100-2" id="5nw-nl-epU"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dDF-pD-RtU">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.22352941179999999" green="0.51764705879999995" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NZd-cR-N5h" kind="relationship" relationship="rootViewController" id="pWf-GW-dbB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rFD-Op-SCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-317" y="773"/>
+        </scene>
+        <!--Setting Table View Cell-->
+        <scene sceneID="Zm0-PF-kxv">
+            <objects>
+                <tableViewController id="NZd-cR-N5h" customClass="SettingTableViewCell" customModule="PowerPlants" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Td3-yf-LYa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ykf-fB-eBm">
+                                <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ykf-fB-eBm" id="rkh-s5-Ilx">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NZd-cR-N5h" id="Rmf-vK-3Ew"/>
+                            <outlet property="delegate" destination="NZd-cR-N5h" id="4aS-QR-82b"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="GOE-gK-cCA"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DJ6-d7-Q3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="481" y="791"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="psq-iu-v8m">
+            <objects>
+                <tabBarController storyboardIdentifier="MainView" automaticallyAdjustsScrollViewInsets="NO" id="Mn9-sW-j1J" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bWo-9t-EEX">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Io2-O0-Hxz" kind="relationship" relationship="viewControllers" id="nZ7-MY-Sdx"/>
+                        <segue destination="vNp-FE-oSt" kind="relationship" relationship="viewControllers" id="kRM-fT-cnL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dqU-9H-gqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1232" y="121"/>
         </scene>
     </scenes>
     <resources>
         <image name="PowerPlantHappy" width="1500" height="1500"/>
         <image name="PowerPlantPuppet2.0" width="3744" height="4071"/>
+        <image name="icons8-potted-plant-50" width="33" height="33"/>
+        <image name="icons8-services-100-2" width="33" height="33"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="bPx-gW-OZY"/>
-    </inferredMetricsTieBreakers>
 </document>
