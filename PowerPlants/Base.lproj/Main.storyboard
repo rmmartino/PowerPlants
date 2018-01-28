@@ -87,7 +87,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PowerPlantPuppet2.0" translatesAutoresizingMaskIntoConstraints="NO" id="9Ha-Ki-Ihl">
                                 <rect key="frame" x="87" y="244.66666666666663" width="240" height="267"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="AOL-gX-6O7"/>
                                     <constraint firstAttribute="width" secondItem="9Ha-Ki-Ihl" secondAttribute="height" multiplier="80:89" id="Vvx-B3-yHf"/>
                                 </constraints>
                             </imageView>
@@ -102,20 +101,22 @@
                                     <segue destination="Mn9-sW-j1J" kind="show" identifier="WelcomeToNavCtrl" id="VPq-TE-O5X"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to PowerPlants!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZL-7w-uBB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to PowerPlants!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZL-7w-uBB">
                                 <rect key="frame" x="20" y="121.00000000000001" width="371" height="40.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" red="0.22352941179999999" green="0.51764705879999995" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.78599640768606926" green="0.85228417728849026" blue="0.7479505178521545" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="9Ha-Ki-Ihl" firstAttribute="top" secondItem="jZL-7w-uBB" secondAttribute="bottom" constant="82.999999999999943" id="5ad-cQ-dJr"/>
                             <constraint firstItem="9Ha-Ki-Ihl" firstAttribute="centerX" secondItem="TxA-AH-NLX" secondAttribute="centerX" id="Y1l-gd-k8O"/>
                             <constraint firstItem="9Ha-Ki-Ihl" firstAttribute="centerY" secondItem="TxA-AH-NLX" secondAttribute="centerY" id="dot-s2-XB0"/>
+                            <constraint firstItem="TxA-AH-NLX" firstAttribute="trailing" secondItem="9Ha-Ki-Ihl" secondAttribute="trailing" constant="87" id="hLF-aE-9AE"/>
                             <constraint firstItem="TxA-AH-NLX" firstAttribute="trailing" secondItem="jZL-7w-uBB" secondAttribute="trailing" constant="23" id="ipA-1g-ayf"/>
                             <constraint firstItem="jZL-7w-uBB" firstAttribute="leading" secondItem="TxA-AH-NLX" secondAttribute="leading" constant="20" id="jUH-J2-QAb"/>
+                            <constraint firstItem="9Ha-Ki-Ihl" firstAttribute="leading" secondItem="TxA-AH-NLX" secondAttribute="leading" constant="87" id="p2b-pJ-lby"/>
                             <constraint firstItem="Gnv-ri-Mto" firstAttribute="centerX" secondItem="TxA-AH-NLX" secondAttribute="centerX" id="pIn-8c-iSB"/>
                             <constraint firstItem="TxA-AH-NLX" firstAttribute="bottom" secondItem="Gnv-ri-Mto" secondAttribute="bottom" constant="74" id="rc8-PS-L5q"/>
                         </constraints>
@@ -124,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnr-GY-5vI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2407" y="121"/>
+            <point key="canvasLocation" x="-2407.2463768115945" y="120.65217391304348"/>
         </scene>
         <!--Plants-->
         <scene sceneID="fhq-Gh-U1N">
