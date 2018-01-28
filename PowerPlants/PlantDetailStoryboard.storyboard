@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gqX-ui-h8i">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Heavy</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Green Fern-->
+        <scene sceneID="GtB-dF-aPU">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="KSN-V4-izM" customClass="SensorPageViewController" customModule="PowerPlants" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Green Fern" id="W2M-9A-9TY"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UUp-kf-M9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1394" y="636"/>
+        </scene>
+        <!--Gauge View Controller-->
+        <scene sceneID="upc-x5-PG4">
+            <objects>
+                <viewController storyboardIdentifier="Gauge" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hR5-Dd-AeG" customClass="GaugeViewController" customModule="PowerPlants" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SXG-RA-76b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdZ-B6-KMB" customClass="WMGaugeView">
+                                <rect key="frame" x="0.0" y="156" width="375" height="375"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVp-Te-Ni1">
+                                        <rect key="frame" x="177" y="323" width="22" height="44"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="32"/>
+                                        <color key="textColor" red="1" green="0.40739351509999999" blue="0.38068705800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SdZ-B6-KMB" secondAttribute="height" multiplier="1:1" id="1nI-HI-2q5"/>
+                                    <constraint firstItem="JVp-Te-Ni1" firstAttribute="centerX" secondItem="SdZ-B6-KMB" secondAttribute="centerX" id="lch-Yc-JW3"/>
+                                    <constraint firstAttribute="bottom" secondItem="JVp-Te-Ni1" secondAttribute="bottom" constant="8" id="xZR-iX-4GL"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20A-rE-633">
+                                <rect key="frame" x="142.5" y="40" width="90" height="76"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="32"/>
+                                <color key="textColor" red="1" green="0.40739351511001587" blue="0.38068705797195435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SdZ-B6-KMB" firstAttribute="centerY" secondItem="YU8-8R-hSN" secondAttribute="centerY" id="763-cM-OZc"/>
+                            <constraint firstItem="SdZ-B6-KMB" firstAttribute="centerX" secondItem="YU8-8R-hSN" secondAttribute="centerX" id="9yu-gf-lR5"/>
+                            <constraint firstItem="SdZ-B6-KMB" firstAttribute="top" relation="lessThanOrEqual" secondItem="20A-rE-633" secondAttribute="bottom" priority="999" constant="40" id="BHw-KD-tjK"/>
+                            <constraint firstItem="20A-rE-633" firstAttribute="centerX" secondItem="YU8-8R-hSN" secondAttribute="centerX" id="IsP-fA-aK4"/>
+                            <constraint firstItem="20A-rE-633" firstAttribute="top" secondItem="YU8-8R-hSN" secondAttribute="top" constant="20" id="yuh-Nj-gJD"/>
+                            <constraint firstItem="SdZ-B6-KMB" firstAttribute="width" secondItem="SXG-RA-76b" secondAttribute="width" id="zsu-fe-uGi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YU8-8R-hSN"/>
+                    </view>
+                    <connections>
+                        <outlet property="gaugeLabel" destination="20A-rE-633" id="Fbq-aZ-ieZ"/>
+                        <outlet property="gaugeView" destination="SdZ-B6-KMB" id="eTn-5R-aGc"/>
+                        <outlet property="valueLabel" destination="JVp-Te-Ni1" id="23F-i7-OvO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovu-gH-aqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2269.5999999999999" y="635.53223388305855"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nyh-cH-rDu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gqX-ui-h8i" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="grf-0Q-cbn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.22352941179999999" green="0.51764705879999995" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KSN-V4-izM" kind="relationship" relationship="rootViewController" id="tEn-Vy-ykm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CNp-Jn-aCQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6.4000000000000004" y="199.70014992503749"/>
+        </scene>
+    </scenes>
+</document>

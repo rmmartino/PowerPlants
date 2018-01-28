@@ -28,6 +28,8 @@ public class PPABeanSyncUtility: NSObject, PTDBeanManagerDelegate, PTDBeanDelega
     
     var activeBeans: [UUID: PTDBean] = [:]
     
+    var lookingForUUID: String? = nil
+    
     override init()
     {
         super.init()
@@ -35,8 +37,9 @@ public class PPABeanSyncUtility: NSObject, PTDBeanManagerDelegate, PTDBeanDelega
         beanyManager?.delegate = self
     }
     
-    func startScanning()
+    func startScanning(uuid: String)
     {
+        self.lookingForUUID = uuid;
         var error: NSError?
         beanyManager!.startScanning(forBeans_error: &error)
         if let e = error
@@ -51,7 +54,6 @@ public class PPABeanSyncUtility: NSObject, PTDBeanManagerDelegate, PTDBeanDelega
         
         if beanManager!.state == BeanManagerState.poweredOn
         {
-            startScanning()
             if let e = scanError
             {
                 print(e)
@@ -59,6 +61,10 @@ public class PPABeanSyncUtility: NSObject, PTDBeanManagerDelegate, PTDBeanDelega
             else
             {
                 print("Please turn on your Bluetooth")
+            }
+            
+            if let uuid = lookingForUUID {
+                startScanning(uuid: uuid)
             }
         }
     }
@@ -70,25 +76,31 @@ public class PPABeanSyncUtility: NSObject, PTDBeanManagerDelegate, PTDBeanDelega
             print(e)
         }
         
-        print("Found a Bean: \(bean.name)")
-        
-        if bean.name == "Bean"
-        {
-            print("connecting...")
-            yourBean = bean
-            connectToBean(bean: yourBean!)
+        print("Found a Bean: \(bean.name) - \(bean.identifier) ")
+        if let uuid = lookingForUUID {
+            if bean.identifier == UUID.init(uuidString: uuid)
+            {
+                print("connecting...")
+                yourBean = bean
+                connectToBean(bean: yourBean!)
+            }
         }
     }
 
     func connectToBean(bean: PTDBean)
     {
+       
         var error: NSError?
         beanyManager?.connect(to: bean, withOptions: [:], error: &error)
         
         if error != nil
         {
+             print("cone!")
             activeBeans[bean.identifier] = bean
             delegate?.didConnectToBean(bean: bean)
+        }
+        else{
+            print(error)
         }
     }
     
@@ -103,7 +115,9 @@ public class PPABeanSyncUtility: NSObject, PTDBeanManagerDelegate, PTDBeanDelega
         activeBeans.removeValue(forKey: bean.identifier!)
         print("Bye")
         print(activeBeans)
-        startScanning()
+        if let uuid = lookingForUUID {
+            startScanning(uuid: uuid)
+        }
     }
     
     public func bean(_ bean: PTDBean!, serialDataReceived data: Data!)
@@ -119,8 +133,8 @@ public class PPABeanSyncUtility: NSObject, PTDBeanManagerDelegate, PTDBeanDelega
                 let array = output.components(separatedBy: ":")
                 if(array.count == 2)
                 {
-                    var temp = array[0]
-                    var soil = array[1]
+                    var soil = array[0]
+                    var temp = array[1]
                     
                     delegate?.didCollectMeasurement(bean: bean, temp: "\(temp)", soil: "\(soil)")
                   

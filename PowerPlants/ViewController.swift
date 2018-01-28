@@ -38,7 +38,5 @@ class ViewController: UIViewController, FUIAuthDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
