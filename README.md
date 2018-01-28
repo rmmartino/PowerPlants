@@ -23,5 +23,6 @@ In the future we hope to expand our add-on marketplace to include automated spri
 Join us on our journey as we make the world a better place worldwide.
 
 
-
-<img src="https://user-images.githubusercontent.com/22032496/35482471-dac65a4a-0403-11e8-8ed6-28ede422aacc.jpeg" width=50% align="center">
+<p align="center"> 
+  <img src="https://user-images.githubusercontent.com/22032496/35482471-dac65a4a-0403-11e8-8ed6-28ede422aacc.jpeg" width=50%>
+</p>
