@@ -15,6 +15,7 @@
 		B31EC163201D1BF600DCE681 /* PlantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31EC162201D1BF600DCE681 /* PlantDetailViewController.swift */; };
 		B31EC164201D276200DCE681 /* WMGaugeView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31EC165201D276200DCE681 /* WMGaugeView.framework */; };
 		B39F667F201D345700017A68 /* SensorPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39F667E201D345700017A68 /* SensorPageViewController.swift */; };
+		B39F6681201D5A6900017A68 /* GaugeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39F6680201D5A6900017A68 /* GaugeViewController.swift */; };
 		C4CCCA15913602AC3AFAF887 /* Pods_PowerPlantsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46DE9953A63583274590CE55 /* Pods_PowerPlantsUITests.framework */; };
 		D20CE5C5201C796900DE25FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CE5C4201C796900DE25FA /* AppDelegate.swift */; };
 		D20CE5C7201C796900DE25FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CE5C6201C796900DE25FA /* ViewController.swift */; };
@@ -65,6 +66,7 @@
 		B31EC162201D1BF600DCE681 /* PlantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetailViewController.swift; sourceTree = "<group>"; };
 		B31EC165201D276200DCE681 /* WMGaugeView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WMGaugeView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39F667E201D345700017A68 /* SensorPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorPageViewController.swift; sourceTree = "<group>"; };
+		B39F6680201D5A6900017A68 /* GaugeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeViewController.swift; sourceTree = "<group>"; };
 		BAC164A237EE2433A0368F2A /* Pods-PowerPlants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerPlants.release.xcconfig"; path = "Pods/Target Support Files/Pods-PowerPlants/Pods-PowerPlants.release.xcconfig"; sourceTree = "<group>"; };
 		C2C11E86C7B14B14E2A5B1BF /* Pods-PowerPlantsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerPlantsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerPlantsUITests/Pods-PowerPlantsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D20CE5C1201C796900DE25FA /* PowerPlants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerPlants.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +202,7 @@
 				2499DFB4201CE09900415771 /* PlantTableViewCell.swift */,
 				2499DFB6201CE53600415771 /* GoogleService-Info.plist */,
 				B31EC160201D1BC300DCE681 /* PlantDetailStoryboard.storyboard */,
+				B39F6680201D5A6900017A68 /* GaugeViewController.swift */,
 				B31EC162201D1BF600DCE681 /* PlantDetailViewController.swift */,
 				B39F667E201D345700017A68 /* SensorPageViewController.swift */,
 			);
@@ -553,6 +556,7 @@
 				D22555F8201CD9F400C6E527 /* PlantProfileViewController.swift in Sources */,
 				D20CE5FF201CBDD500DE25FA /* KindTableViewCell.swift in Sources */,
 				D20CE5C5201C796900DE25FA /* AppDelegate.swift in Sources */,
+				B39F6681201D5A6900017A68 /* GaugeViewController.swift in Sources */,
 				B39F667F201D345700017A68 /* SensorPageViewController.swift in Sources */,
 				D20CE5FB201CBDAD00DE25FA /* PlantTableViewController.swift in Sources */,
 				B31EC163201D1BF600DCE681 /* PlantDetailViewController.swift in Sources */,

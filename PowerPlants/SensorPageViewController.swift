@@ -7,10 +7,78 @@
 //
 
 import UIKit
+import Bean_iOS_OSX_SDK
+import WMGaugeView
 
-class SensorPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+class SensorPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource, PPABeanSyncDelegate {
+    func didConnectToBean(bean: PTDBean) {
+        
+    }
+    
     
     var pageControl = UIPageControl()
+    @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var gaugeView: WMGaugeView!
+    
+    func didCollectMeasurement(bean: PTDBean, temp: String, soil: String) {
+        
+        let celsius = Float(temp)!
+        let f: Int =  Int((celsius*(9/5)+32).rounded())
+        
+        tempVC?.gaugeValueTemp = Float(f)
+        
+        var scaledMoisture = (convertToRange(number: Double(soil)!)).rounded()
+        
+        if scaledMoisture > 100{
+            scaledMoisture = 100
+        }
+        
+        
+        
+        soilVC?.gaugeValueTemp = Float(scaledMoisture)
+ 
+       
+        //tempLabel.text = "\(f)"
+        
+    }
+    
+    func didDisconnectFromBean(bean: PTDBean) {
+        
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+     
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        super.viewDidLoad()
+        
+        self.dataSource = self
+        
+        self.delegate = self
+        configurePageControl()
+        
+        var powerbeanID = "E914B3D8-639D-06F4-F782-128EF4F48F01"
+        
+        PPABeanSyncUtility.shared.delegate = self
+        PPABeanSyncUtility.shared.startScanning(uuid: powerbeanID)
+    
+        
+        
+        // This sets up the first view that will show up on our page control
+        if let firstViewController = orderedViewControllers.first {
+            setViewControllers([firstViewController],
+                               direction: .forward,
+                               animated: true,
+                               completion: nil)
+        }
+    }
+    
+
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
@@ -61,31 +129,28 @@ class SensorPageViewController: UIPageViewController, UIPageViewControllerDelega
         return UIStoryboard(name: "PlantDetailStoryboard", bundle: nil).instantiateViewController(withIdentifier: viewController)
     }
     
+    var tempVC: GaugeViewController? = nil
+    var soilVC: GaugeViewController? = nil
     lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newVc(viewController: "TemperatureGauge"),
-                self.newVc(viewController: "MoistureGauge")]
+        tempVC = self.newVc(viewController: "Gauge") as! GaugeViewController
+        soilVC = self.newVc(viewController: "Gauge") as! GaugeViewController
+        
+        tempVC?.units = "˚F"
+        soilVC?.units = "%"
+        tempVC?.gaugeLabelTemp = "Temp"
+        soilVC?.gaugeLabelTemp = "Moisture"
+        
+        
+        return [tempVC!,soilVC!]
     }()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        self.dataSource = self
-        
-        // This sets up the first view that will show up on our page control
-        if let firstViewController = orderedViewControllers.first {
-            setViewControllers([firstViewController],
-                               direction: .forward,
-                               animated: true,
-                               completion: nil)
-        }
-
-        func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        }
-        
-        self.delegate = self
-        configurePageControl()
+    
+    func convertToRange(number: Double) -> Double {
+        return (number) / (310) * 100
     }
+   
+    
+    
+
     
     func configurePageControl() {
         // The total number of pages that are available is based on how many available colors we have.
@@ -93,7 +158,7 @@ class SensorPageViewController: UIPageViewController, UIPageViewControllerDelega
         self.pageControl.numberOfPages = orderedViewControllers.count
         self.pageControl.currentPage = 0
         self.pageControl.tintColor = UIColor.black
-        self.pageControl.pageIndicatorTintColor = UIColor.white
+        self.pageControl.pageIndicatorTintColor = UIColor.gray
         self.pageControl.currentPageIndicatorTintColor = UIColor.black
         self.view.addSubview(pageControl)
     }

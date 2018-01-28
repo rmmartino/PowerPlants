@@ -89,13 +89,18 @@ public class PPABeanSyncUtility: NSObject, PTDBeanManagerDelegate, PTDBeanDelega
 
     func connectToBean(bean: PTDBean)
     {
+       
         var error: NSError?
         beanyManager?.connect(to: bean, withOptions: [:], error: &error)
         
         if error != nil
         {
+             print("cone!")
             activeBeans[bean.identifier] = bean
             delegate?.didConnectToBean(bean: bean)
+        }
+        else{
+            print(error)
         }
     }
     

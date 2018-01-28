@@ -14,6 +14,7 @@ class PlantDetailViewController: UIViewController, PPABeanSyncDelegate {
     
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var gaugeView: WMGaugeView!
+    
     func didConnectToBean(bean: PTDBean) {
         
     }
@@ -24,11 +25,14 @@ class PlantDetailViewController: UIViewController, PPABeanSyncDelegate {
         let celsius = Float(temp)!
         let f: Int =  Int((celsius*(9/5)+32).rounded())
         
+        let scaledMoisture = convertToRange(number: Double(soil)!)
+        
         tempLabel.text = "\(f)"
         gaugeView.setValue(Float(f), animated: true, duration: 0.9)
-
         
-    }
+        
+
+   }
     
     func didDisconnectFromBean(bean: PTDBean) {
         
@@ -61,7 +65,9 @@ class PlantDetailViewController: UIViewController, PPABeanSyncDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func convertToRange(number: Double) -> Double {
+        return (number) / (300) * 100
+    }
     /*
     // MARK: - Navigation
 
