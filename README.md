@@ -25,4 +25,5 @@ Join us on our journey as we make the world a better place worldwide.
 
 <p align="center"> 
   <img src="https://user-images.githubusercontent.com/22032496/35482471-dac65a4a-0403-11e8-8ed6-28ede422aacc.jpeg" width=50%>
+  <img src="(https://user-images.githubusercontent.com/22032435/35482683-e8f60004-0406-11e8-942f-371f2403de03.jpeg" width=50%>
 </p>
