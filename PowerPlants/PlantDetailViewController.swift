@@ -43,6 +43,7 @@ class PlantDetailViewController: UIViewController, PPABeanSyncDelegate {
     }
 
    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

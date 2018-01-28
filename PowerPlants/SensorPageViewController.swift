@@ -9,13 +9,14 @@
 import UIKit
 import Bean_iOS_OSX_SDK
 import WMGaugeView
+import FirebaseFirestore
 
 class SensorPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource, PPABeanSyncDelegate {
     func didConnectToBean(bean: PTDBean) {
         
     }
     
-    
+    var type_ref: DocumentReference? = nil
     var pageControl = UIPageControl()
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var gaugeView: WMGaugeView!
@@ -55,19 +56,17 @@ class SensorPageViewController: UIPageViewController, UIPageViewControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        super.viewDidLoad()
-        
         self.dataSource = self
         
         self.delegate = self
         configurePageControl()
         
-        var powerbeanID = "E914B3D8-639D-06F4-F782-128EF4F48F01"
+        var powerbeanID = "E8532FA8-BDCC-1100-6762-AFF438E42373"
         
         PPABeanSyncUtility.shared.delegate = self
         PPABeanSyncUtility.shared.startScanning(uuid: powerbeanID)
     
-        
+       
         
         // This sets up the first view that will show up on our page control
         if let firstViewController = orderedViewControllers.first {
@@ -75,6 +74,23 @@ class SensorPageViewController: UIPageViewController, UIPageViewControllerDelega
                                direction: .forward,
                                animated: true,
                                completion: nil)
+        }
+        
+        let plantTypeRef = self.type_ref
+        
+
+        
+        plantTypeRef?.getDocument { (doc, err) in
+            if let doc = doc {
+                let moistureMax = (doc.get("moistureMax") as! NSNumber).intValue
+                let moistureMin = (doc.get("moistureMin") as! NSNumber).intValue
+                
+                let tempMax = (doc.get("temperatureMax") as! NSNumber).intValue
+                let tempMin = (doc.get("temperatureMin") as! NSNumber).intValue
+                self.soilVC?.ranges = [moistureMin,moistureMax,100]
+                
+                self.tempVC?.ranges = [tempMin,tempMax,100]
+            }
         }
     }
     
@@ -137,8 +153,11 @@ class SensorPageViewController: UIPageViewController, UIPageViewControllerDelega
         
         tempVC?.units = "˚F"
         soilVC?.units = "%"
-        tempVC?.gaugeLabelTemp = "Temp"
+        tempVC?.gaugeLabelTemp = "Temperature"
         soilVC?.gaugeLabelTemp = "Moisture"
+        
+        tempVC?.rangeLabels[0] = "Too Cold"
+        tempVC?.rangeLabels[2] = "Too Hot"
         
         
         return [tempVC!,soilVC!]

@@ -36,8 +36,22 @@ class GaugeViewController: UIViewController, UIPageViewControllerDelegate {
     }
     
     var rangeValues = [33,66,100]
+    
+    var ranges: [Int] {
+        get {
+            return rangeValues
+        }
+        set(val) {
+            rangeValues = val
+            if(self.gaugeView != nil){
+                self.gaugeView.rangeValues = rangeValues
+            }
+        }
+    }
+    
     var rangeColors = [UIColor(red: 232.0 / 255.0, green: 111 / 255.0, blue: 33 / 255.0, alpha: 1.0), UIColor(red: 39 / 255.0, green: 185 / 255.0, blue: 70 / 255.0, alpha: 1.0), UIColor(red: 231 / 255.0, green: 32 / 255.0, blue: 43 / 255.0, alpha: 1.0)]
     
+    var rangeLabels = ["Needs water", "Optimal", "Over watered"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +65,9 @@ class GaugeViewController: UIViewController, UIPageViewControllerDelegate {
         gaugeView.rangeLabelsFontColor = UIColor.white
         gaugeView.rangeLabelsWidth = 0.04
         gaugeView.rangeLabelsFont = UIFont.init(name: "AvenirNext", size: 0.04)
+        gaugeView.rangeValues = rangeValues
         
-        
-        gaugeView.rangeLabels = ["Needs water", "Good", "Over watered"]
+        gaugeView.rangeLabels = rangeLabels
        
         var powerbeanID = "E914B3D8-639D-06F4-F782-128EF4F48F01"
            /*PPABeanSyncUtility.shared.delegate = self as! PPABeanSyncDelegate

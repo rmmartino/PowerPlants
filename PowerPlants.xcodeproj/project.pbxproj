@@ -22,7 +22,6 @@
 		B39F6681201D5A6900017A68 /* GaugeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39F6680201D5A6900017A68 /* GaugeViewController.swift */; };
 		C4CCCA15913602AC3AFAF887 /* Pods_PowerPlantsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46DE9953A63583274590CE55 /* Pods_PowerPlantsUITests.framework */; };
 		D20CE5C5201C796900DE25FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CE5C4201C796900DE25FA /* AppDelegate.swift */; };
-		D20CE5C7201C796900DE25FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CE5C6201C796900DE25FA /* ViewController.swift */; };
 		D20CE5CA201C796900DE25FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20CE5C8201C796900DE25FA /* Main.storyboard */; };
 		D20CE5CC201C796900DE25FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D20CE5CB201C796900DE25FA /* Assets.xcassets */; };
 		D20CE5CF201C796900DE25FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20CE5CD201C796900DE25FA /* LaunchScreen.storyboard */; };
@@ -30,12 +29,7 @@
 		D20CE5E5201C796900DE25FA /* PowerPlantsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CE5E4201C796900DE25FA /* PowerPlantsUITests.swift */; };
 		D20CE5FB201CBDAD00DE25FA /* PlantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CE5FA201CBDAD00DE25FA /* PlantTableViewController.swift */; };
 		D20CE5FF201CBDD500DE25FA /* KindTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CE5FE201CBDD500DE25FA /* KindTableViewCell.swift */; };
-		D20CE601201CBFE800DE25FA /* AddPlant1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CE600201CBFE800DE25FA /* AddPlant1ViewController.swift */; };
-		D22555F2201CC36E00C6E527 /* AddPlant2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555F1201CC36E00C6E527 /* AddPlant2ViewController.swift */; };
-		D22555F4201CD13A00C6E527 /* AddPlant3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555F3201CD13A00C6E527 /* AddPlant3ViewController.swift */; };
-		D22555F8201CD9F400C6E527 /* PlantProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555F7201CD9F300C6E527 /* PlantProfileViewController.swift */; };
 		D22555FA201CDDEE00C6E527 /* PlantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555F9201CDDEE00C6E527 /* PlantTableViewCell.swift */; };
-		D22555FE201CE08300C6E527 /* AddPlant2_5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22555FD201CE08200C6E527 /* AddPlant2_5ViewController.swift */; };
 		D2BE6A16201D33330059B520 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BE6A15201D33330059B520 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +52,6 @@
 
 /* Begin PBXFileReference section */
 		22ED7BEE28EB36F7766ECC9A /* Pods-PowerPlants.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerPlants.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerPlants/Pods-PowerPlants.debug.xcconfig"; sourceTree = "<group>"; };
-		2499DFB4201CE09900415771 /* PlantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantTableViewCell.swift; sourceTree = "<group>"; };
 		2499DFB6201CE53600415771 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2952A1A5BBC3B275B30FFC5C /* Pods_PowerPlants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PowerPlants.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46DE9953A63583274590CE55 /* Pods_PowerPlantsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PowerPlantsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +71,6 @@
 		C2C11E86C7B14B14E2A5B1BF /* Pods-PowerPlantsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerPlantsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerPlantsUITests/Pods-PowerPlantsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D20CE5C1201C796900DE25FA /* PowerPlants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerPlants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20CE5C4201C796900DE25FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D20CE5C6201C796900DE25FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D20CE5C9201C796900DE25FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D20CE5CB201C796900DE25FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D20CE5CE201C796900DE25FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -91,12 +83,7 @@
 		D20CE5E6201C796900DE25FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D20CE5FA201CBDAD00DE25FA /* PlantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantTableViewController.swift; sourceTree = "<group>"; };
 		D20CE5FE201CBDD500DE25FA /* KindTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindTableViewCell.swift; sourceTree = "<group>"; };
-		D20CE600201CBFE800DE25FA /* AddPlant1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlant1ViewController.swift; sourceTree = "<group>"; };
-		D22555F1201CC36E00C6E527 /* AddPlant2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlant2ViewController.swift; sourceTree = "<group>"; };
-		D22555F3201CD13A00C6E527 /* AddPlant3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlant3ViewController.swift; sourceTree = "<group>"; };
-		D22555F7201CD9F300C6E527 /* PlantProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantProfileViewController.swift; sourceTree = "<group>"; };
 		D22555F9201CDDEE00C6E527 /* PlantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantTableViewCell.swift; sourceTree = "<group>"; };
-		D22555FD201CE08200C6E527 /* AddPlant2_5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddPlant2_5ViewController.swift; path = PowerPlants/AddPlant2_5ViewController.swift; sourceTree = SOURCE_ROOT; };
 		D2255604201D1E3400C6E527 /* PowerPlants.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PowerPlants.entitlements; sourceTree = "<group>"; };
 		D2BE6A15201D33330059B520 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		F87081E6A8BF7E074292ED08 /* Pods-PowerPlantsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerPlantsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerPlantsTests/Pods-PowerPlantsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6767C83A201DCF5C0064619C /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				D20CE5FE201CBDD500DE25FA /* KindTableViewCell.swift */,
+				D22555F9201CDDEE00C6E527 /* PlantTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		843195F2A3FF57BB0308D5E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,25 +185,17 @@
 		D20CE5C3201C796900DE25FA /* PowerPlants */ = {
 			isa = PBXGroup;
 			children = (
+				6767C83A201DCF5C0064619C /* TableViewCells */,
 				B31EC15B201CDA5A00DCE681 /* Hardware */,
 				D2255604201D1E3400C6E527 /* PowerPlants.entitlements */,
 				67003A07201D7E65003152AF /* beanimg.png */,
 				D20CE5C4201C796900DE25FA /* AppDelegate.swift */,
-				D20CE5C6201C796900DE25FA /* ViewController.swift */,
 				D2BE6A15201D33330059B520 /* WelcomeViewController.swift */,
-				D20CE5C8201C796900DE25FA /* Main.storyboard */,
-				D22555F3201CD13A00C6E527 /* AddPlant3ViewController.swift */,
-				D22555FD201CE08200C6E527 /* AddPlant2_5ViewController.swift */,
-				D22555F1201CC36E00C6E527 /* AddPlant2ViewController.swift */,
-				D20CE600201CBFE800DE25FA /* AddPlant1ViewController.swift */,
-				D20CE5CB201C796900DE25FA /* Assets.xcassets */,
-				D20CE5FE201CBDD500DE25FA /* KindTableViewCell.swift */,
-				D22555F9201CDDEE00C6E527 /* PlantTableViewCell.swift */,
 				D20CE5FA201CBDAD00DE25FA /* PlantTableViewController.swift */,
-				D22555F7201CD9F300C6E527 /* PlantProfileViewController.swift */,
+				D20CE5C8201C796900DE25FA /* Main.storyboard */,
+				D20CE5CB201C796900DE25FA /* Assets.xcassets */,
 				D20CE5CD201C796900DE25FA /* LaunchScreen.storyboard */,
 				D20CE5D0201C796900DE25FA /* Info.plist */,
-				2499DFB4201CE09900415771 /* PlantTableViewCell.swift */,
 				2499DFB6201CE53600415771 /* GoogleService-Info.plist */,
 				67077957201D4D61004C9070 /* AddPlantFormViewController.swift */,
 				6787CD75201DB1C8005F484E /* icons8-services-100-2.png */,
@@ -601,15 +589,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D20CE5C7201C796900DE25FA /* ViewController.swift in Sources */,
-				D22555FE201CE08300C6E527 /* AddPlant2_5ViewController.swift in Sources */,
 				6787CD78201DB4A8005F484E /* SettingTableViewCell.swift in Sources */,
-				D22555F2201CC36E00C6E527 /* AddPlant2ViewController.swift in Sources */,
-				D22555F4201CD13A00C6E527 /* AddPlant3ViewController.swift in Sources */,
 				B31EC15D201CDA8B00DCE681 /* PPABeanSyncUtility.swift in Sources */,
-				D20CE601201CBFE800DE25FA /* AddPlant1ViewController.swift in Sources */,
 				D22555FA201CDDEE00C6E527 /* PlantTableViewCell.swift in Sources */,
-				D22555F8201CD9F400C6E527 /* PlantProfileViewController.swift in Sources */,
 				67077958201D4D61004C9070 /* AddPlantFormViewController.swift in Sources */,
 				D20CE5FF201CBDD500DE25FA /* KindTableViewCell.swift in Sources */,
 				D20CE5C5201C796900DE25FA /* AppDelegate.swift in Sources */,

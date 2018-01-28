@@ -10,6 +10,7 @@ import Foundation
 
 import FirebaseFirestore
 import FirebaseStorage
+import FirebaseAuth
 import Eureka
 import ImageRow
 
@@ -68,18 +69,20 @@ class AddPlantFormController: FormViewController {
             <<< ButtonRow(){
                 $0.title = "Save"
                 $0.onCellSelection({ (cellof, row) in
-                    print("Save")
+                    print("\(Auth.auth().currentUser!.uid)")
                     let db = Firestore.firestore()
               
                  
-                    let ref = db.collection("users/5BI75Xa099RRvnkekLoyIJO2xWv2/plants").addDocument(data: [
+                    let ref = db.collection("users/\(Auth.auth().currentUser!.uid)/plants").addDocument(data: [
                         "name": (self.form.rowBy(tag: "plantName") as! TextRow).value as! String,
                         "plant_type": (self.form.rowBy(tag: "PlantType") as! PushRow<QueryDocumentSnapshot>).value!.get("name") as! String,
-                        "location": (self.form.rowBy(tag: "Location") as! TextRow).value! as! String
+                        "location": (self.form.rowBy(tag: "Location") as! TextRow).value! as! String,
+                        "type_ref":(self.form.rowBy(tag: "PlantType") as! PushRow<QueryDocumentSnapshot>).value?.reference
+                        
                         ])
                     
                     
-                    let newSensor = db.collection("users/5BI75Xa099RRvnkekLoyIJO2xWv2/sensors")
+                    let newSensor = db.collection("users/\(Auth.auth().currentUser!.uid)/sensors")
                     newSensor.addDocument(data: [
                         "uuid": self.seedUUID
                         ])

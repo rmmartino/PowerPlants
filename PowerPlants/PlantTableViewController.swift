@@ -11,6 +11,7 @@ import FirebaseFirestore
 import FirebaseStorage
 import BulletinBoard
 import Bean_iOS_OSX_SDK
+import FirebaseAuth
 
 class PlantTableViewController: UITableViewController, PTDBeanManagerDelegate, PTDBeanDelegate {
     var linkAlertUp = false
@@ -19,7 +20,7 @@ class PlantTableViewController: UITableViewController, PTDBeanManagerDelegate, P
     
     lazy var bulletinManager: BulletinManager = {
  
-        let connectPage = PageBulletinItem(title: "Found PowerSeed")
+        let connectPage = PageBulletinItem(title: "PowerSeed Found")
         connectPage.image = UIImage.init(named: "beanimg")
         connectPage.descriptionText = "Let's link your PowerSeed Sensor"
         connectPage.actionButtonTitle = "Link Now"
@@ -68,7 +69,7 @@ class PlantTableViewController: UITableViewController, PTDBeanManagerDelegate, P
 
         let db = Firestore.firestore()
         
-        let plantsRef = db.collection("users/5BI75Xa099RRvnkekLoyIJO2xWv2/plants")
+        let plantsRef = db.collection("users/\(Auth.auth().currentUser!.uid)/plants")
         
         plantsRef.addSnapshotListener(options: nil) { (snp, err) in
             if let documents = snp?.documents {
@@ -104,7 +105,7 @@ class PlantTableViewController: UITableViewController, PTDBeanManagerDelegate, P
     
     override func viewDidAppear(_ animated: Bool) {
         let db = Firestore.firestore()
-        let sensorsRef = db.collection("users/5BI75Xa099RRvnkekLoyIJO2xWv2/sensors")
+        let sensorsRef = db.collection("users/\(Auth.auth().currentUser!.uid)/sensors")
         sensorsRef.getDocuments { (docs, err) in
             if let sensors = docs {
                 self.knownSensors = sensors.documents
@@ -196,17 +197,13 @@ class PlantTableViewController: UITableViewController, PTDBeanManagerDelegate, P
         let storageRef = storage.reference()
         let imagesRef = storageRef.child("images")
         let fileName = "delray-plants-house-plants-6zz-64_1000.jpg"
-        let spaceRef = imagesRef.child(fileName)
-        let path = spaceRef.fullPath;
-        let name = spaceRef.name;
-        let plantPicture = plant.get("image_reference")
-        let gsReference = storage.reference(forURL: "gs://powerplants-c46e2.appspot.com/plantPicture")
+
         // Create a reference to the file you want to download
         
-        let islandRef = storageRef.child("plants/\(plant.documentID).jpg")
+        let plantImg = storageRef.child("plants/\(plant.documentID).jpg")
         
         // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-        islandRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+        plantImg.getData(maxSize: 1 * 1024 * 1024) { data, error in
             if let error = error {
                 // Uh-oh, an error occurred!
                 print(error)
@@ -230,7 +227,14 @@ class PlantTableViewController: UITableViewController, PTDBeanManagerDelegate, P
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        var error: NSError?
+        beanyManager?.stopScanning(forBeans_error: &error)
+       var vc =  UIStoryboard.init(name: "PlantDetailStoryboard", bundle: nil).instantiateInitialViewController()
+        vc?.title = snapshot[indexPath.row].get("name") as! String
+        if let vc = vc as? SensorPageViewController {
+            vc.type_ref = snapshot[indexPath.row].get("type_ref") as! DocumentReference
+        }
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     /*
