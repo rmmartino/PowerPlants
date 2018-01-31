@@ -1,26 +1,12 @@
 # PowerPlants
-## The World's most advanced plant monitoring system
 
-PowerPlants: Here to help the world GROW into a more healthy, nutrient oriented place. By using efficient object-oriented 
-software, and elegant class hierarchies, we have combined powerful cloud based technology and specialized IOT-enabled sensor 
-hardware to solve an everyday problem. 
+This software and hardware was developed over 36 hours at HoyaHacks, a Hackathon at Georgetown University by me and three teammates. 
 
-PowerPlants is an app that enables everyone to take care of their favorite house members, the perfect household companions, 
-their lovely plants. Our first hardware product is known as “the PowerSeed”, based on the Light Blue Bean, it uses sensors 
-and a compatible hydrometer to detect soil moisture and ambient room temperatures. This not only enables the user to provide 
-the best possible care for their plant(s), but also enables the world’s first wireless houseplant analytics platform. Backed 
-by data compiled by our skilled plant analysts of over 230 plant types, the alerts and gauges throughout the app are tailored 
-to each individual plant to ensure the best possible in-app advice. Our real-time low-energy Bluetooth technology will alert 
-you to water your plant when it lacks sufficient hydration. It will even help you prevent overwatering. Never again will you 
-unintentionally neglect your plant. 
+We used PunchThrough's Light Blue Bean microprocessor which has an on board thermomometer as well as an auxilarary hydrometer to establish a serial connection to a phone over Bluetooth energy in real time. Upon opening our app with a nearby Bean, which we call the PowerSeed, users have the option to connect to the PowerSeed and enter information about their plant. Among the information users can enter, users can pick the category their plant falls into. Then, when users' phones are in range of the PowerSeed which is in the soil of the plant, the temperature and moisture data is sent to the phone every second. The meters displaying the temperature and moisture data show the current levels as well as the optimal temperature and mosture level. These optimizations are based on data from the University of Georgia which contains data on 230 different household plants. We organized plants into categories and analyzed the data accordingly. So, when users select the plant type, they are customizing the meters to their plant so the app can tell the user in real time whether the plant is under, over or optimally watered as well as if the ambient temperature is too low, too high or acceptable for the plant. This app combines powerful cloud based technology and specialized IOT-enabled sensor hardware to solve an everyday problem. 
 
-It is important to maintain optimal temperature and moisture for your plant(s). For this reason, PowerPlants has developed 
-the hardware and software to provide you with the technology you need in order to take proper care of your plants and to help 
-our world flourish and grow.
+My role in this project was to write and implement code for the Arduino, create a sync utility so the phone recieved the data from the Arduino, design the meters, and write code so that the meters' levels and optimizations adjusted based on the data from the sensors and the plant type.
 
 In the future we hope to expand our add-on marketplace to include automated sprinklers, drip hoses, and more. 
-
-Join us on our journey as we make the world a better place worldwide.
 
 
 <p align="center"> 
